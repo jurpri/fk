@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum · Fleischerei Kröppel · Wien</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/Logo_freigestellt.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0707;color:#e8e3dd;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700}
+:root{--red:#a01818;--red-bright:#d62828;--bg:#0a0707;--bg-2:#15100f;--bg-3:#1f1715;--cream:#f5ede1;--gold:#c9a567;--text:#e8e3dd;--muted:#a89e93}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(10,7,7,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,42,42,.4)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display';font-size:18px;letter-spacing:1px;font-weight:700;color:var(--cream)}
+.nav-logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav-logo span{color:var(--red-bright)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+.nav-links a:hover{color:var(--red-bright)}
+.nav-cta{padding:10px 22px;border:1px solid var(--red);color:var(--cream);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .25s}
+.nav-cta:hover{background:var(--red-bright);border-color:var(--red-bright)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px}
+.page-header{padding:140px 6vw 60px;text-align:center;background:linear-gradient(180deg,rgba(160,24,24,0.08) 0%,transparent 100%);border-bottom:1px solid rgba(58,42,42,.4)}
+.page-header .tag{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.page-header h1{font-size:clamp(2rem,5vw,3.2rem);color:var(--cream)}
+.content-wrap{max-width:760px;margin:0 auto;padding:60px 6vw 100px}
+.legal-section{margin-bottom:48px}
+.legal-section h2{font-size:1.1rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(58,42,42,.5)}
+.legal-section p{color:var(--muted);font-size:.92rem;margin-bottom:10px;line-height:1.7}
+.legal-section a{color:var(--gold);border-bottom:1px solid rgba(201,165,103,.3)}
+.legal-section a:hover{color:var(--cream)}
+table{width:100%;border-collapse:collapse;margin-bottom:10px}
+td{padding:8px 0;font-size:.92rem;color:var(--muted);vertical-align:top;line-height:1.6}
+td:first-child{width:200px;color:#7a7068;font-size:.82rem;letter-spacing:.06em;padding-right:24px}
+.footer{background:#080505;padding:32px 6vw;border-top:1px solid #1f1715}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo img{width:38px;height:38px;object-fit:contain}
+.footer-logo span{font-family:'Playfair Display';font-size:18px;color:var(--cream);letter-spacing:1px}
+.footer-meta{color:var(--muted);font-size:.8rem}
+.footer-meta a{color:var(--muted)}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
+.footer-legal a{font-size:.78rem;color:var(--muted);border-bottom:1px solid rgba(168,158,147,.25);padding-bottom:1px;transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+@media(max-width:640px){.nav-links,.nav-cta{display:none}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:#0a0707;padding:24px 6vw 32px;border-bottom:1px solid #1f1715;gap:20px}.burger{display:flex}td:first-child{width:120px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/Logo_freigestellt.webp" alt="Logo">
+    Fleischerei <span>Kröppel</span>
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="index.html#about">Über Uns</a></li>
+    <li><a href="index.html#spec">Spezialitäten</a></li>
+    <li><a href="index.html#origin">Herkunft</a></li>
+    <li><a href="index.html#gallery">Galerie</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="mittagsmenu.html">Mittagsmenü</a></li>
+  </ul>
+  <a href="tel:+4315128483" class="nav-cta">01 / 512 84 83</a>
+  <div class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="tag">Fleischerei Kröppel · Wien</div>
+  <h1>Impressum</h1>
+</header>
+
+<main class="content-wrap">
+
+  <div class="legal-section">
+    <h2>Angaben gemäß § 5 ECG</h2>
+    <table>
+      <tr><td>Unternehmensinhaber</td><td>Florian Kröppel</td></tr>
+      <tr><td>Unternehmensname</td><td>Fleischerei Kröppel</td></tr>
+      <tr><td>Rechtsform</td><td>Einzelunternehmen</td></tr>
+      <tr><td>Adresse</td><td>Postgasse 1–3, 1010 Wien, Österreich</td></tr>
+      <tr><td>Telefon</td><td><a href="tel:+4315128483">+43 1 512 84 83</a></td></tr>
+      <tr><td>E-Mail</td><td><a href="mailto:fleischerei-kroeppel@outlook.at">fleischerei-kroeppel@outlook.at</a></td></tr>
+    </table>
+  </div>
+
+  <div class="legal-section">
+    <h2>Unternehmensgegenstand</h2>
+    <p>Fleischhauer und Selcher — Herstellung und Verkauf von Fleisch-, Wurst- und Selchwaren sowie Mittagsmenüs.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Gewerberechtliche Angaben</h2>
+    <table>
+      <tr><td>Gewerbe</td><td>Fleischhauer und Selcher (reglementiertes Gewerbe gemäß GewO 1994)</td></tr>
+      <tr><td>Zuständige Behörde</td><td>Magistratisches Bezirksamt für den 1. Bezirk Wien</td></tr>
+      <tr><td>Kammerzugehörigkeit</td><td>Wirtschaftskammer Wien, Sparte Gewerbe und Handwerk</td></tr>
+      <tr><td>Anwendbare Vorschriften</td><td>Gewerbeordnung 1994 (GewO), abrufbar unter <a href="https://www.ris.bka.gv.at" target="_blank">ris.bka.gv.at</a></td></tr>
+      <tr><td>GISA-Zahl</td><td>[bitte eintragen]</td></tr>
+      <tr><td>UID-Nummer</td><td>[bitte eintragen, falls vorhanden]</td></tr>
+    </table>
+  </div>
+
+  <div class="legal-section">
+    <h2>Haftungsausschluss</h2>
+    <p>Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.</p>
+    <p>Alle Inhalte dieser Website sind urheberrechtlich geschützt. Die Vervielfältigung, Bearbeitung oder Nutzung dieser Inhalte außerhalb der engen Grenzen des Urheberrechts bedarf der schriftlichen Zustimmung des jeweiligen Autors.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>Online-Streitbeilegung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a> finden. Unsere E-Mail-Adresse lautet: <a href="mailto:fleischerei-kroeppel@outlook.at">fleischerei-kroeppel@outlook.at</a></p>
+    <p>Wir sind nicht bereit und nicht verpflichtet, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="images/Logo_freigestellt.webp" alt="Logo">
+      <span>Fleischerei Kröppel · seit 1932</span>
+    </div>
+    <div>
+      <div class="footer-meta">
+        © 2026 Fleischerei Kröppel · Postgasse 1-3, 1010 Wien · <a href="tel:+4315128483">01/512 84 83</a>
+      </div>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open')})});
+</script>
+</body>
+</html>

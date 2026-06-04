@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Datenschutz · Fleischerei Kröppel · Wien</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="images/Logo_freigestellt.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0707;color:#e8e3dd;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700}
+:root{--red:#a01818;--red-bright:#d62828;--bg:#0a0707;--bg-2:#15100f;--cream:#f5ede1;--gold:#c9a567;--text:#e8e3dd;--muted:#a89e93}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(10,7,7,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,42,42,.4)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display';font-size:18px;letter-spacing:1px;font-weight:700;color:var(--cream)}
+.nav-logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav-logo span{color:var(--red-bright)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+.nav-links a:hover{color:var(--red-bright)}
+.nav-cta{padding:10px 22px;border:1px solid var(--red);color:var(--cream);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .25s}
+.nav-cta:hover{background:var(--red-bright);border-color:var(--red-bright)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px}
+.page-header{padding:140px 6vw 60px;text-align:center;background:linear-gradient(180deg,rgba(160,24,24,0.08) 0%,transparent 100%);border-bottom:1px solid rgba(58,42,42,.4)}
+.page-header .tag{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.page-header h1{font-size:clamp(2rem,5vw,3.2rem);color:var(--cream)}
+.content-wrap{max-width:760px;margin:0 auto;padding:60px 6vw 100px}
+.legal-section{margin-bottom:48px}
+.legal-section h2{font-size:1.1rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:20px;padding-bottom:10px;border-bottom:1px solid rgba(58,42,42,.5)}
+.legal-section h3{font-size:.95rem;color:var(--cream);margin:20px 0 10px;font-family:'Inter',sans-serif;font-weight:600}
+.legal-section p{color:var(--muted);font-size:.92rem;margin-bottom:10px;line-height:1.7}
+.legal-section ul{color:var(--muted);font-size:.92rem;padding-left:20px;margin-bottom:10px;line-height:1.8}
+.legal-section a{color:var(--gold);border-bottom:1px solid rgba(201,165,103,.3)}
+.legal-section a:hover{color:var(--cream)}
+.info-box{background:var(--bg-2);border:1px solid rgba(201,165,103,.2);border-left:3px solid var(--gold);border-radius:4px;padding:16px 20px;margin-bottom:16px}
+.info-box p{margin:0;font-size:.88rem}
+.footer{background:#080505;padding:32px 6vw;border-top:1px solid #1f1715}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo img{width:38px;height:38px;object-fit:contain}
+.footer-logo span{font-family:'Playfair Display';font-size:18px;color:var(--cream);letter-spacing:1px}
+.footer-meta{color:var(--muted);font-size:.8rem}
+.footer-meta a{color:var(--muted)}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
+.footer-legal a{font-size:.78rem;color:var(--muted);border-bottom:1px solid rgba(168,158,147,.25);padding-bottom:1px;transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+@media(max-width:640px){.nav-links,.nav-cta{display:none}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:#0a0707;padding:24px 6vw 32px;border-bottom:1px solid #1f1715;gap:20px}.burger{display:flex}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/Logo_freigestellt.webp" alt="Logo">
+    Fleischerei <span>Kröppel</span>
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="index.html#about">Über Uns</a></li>
+    <li><a href="index.html#spec">Spezialitäten</a></li>
+    <li><a href="index.html#origin">Herkunft</a></li>
+    <li><a href="index.html#gallery">Galerie</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="mittagsmenu.html">Mittagsmenü</a></li>
+  </ul>
+  <a href="tel:+4315128483" class="nav-cta">01 / 512 84 83</a>
+  <div class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="tag">Fleischerei Kröppel · Wien</div>
+  <h1>Datenschutzerklärung</h1>
+</header>
+
+<main class="content-wrap">
+
+  <div class="legal-section">
+    <h2>1. Verantwortlicher</h2>
+    <div class="info-box">
+      <p>Florian Kröppel · Fleischerei Kröppel · Postgasse 1–3, 1010 Wien<br>
+      E-Mail: <a href="mailto:fleischerei-kroeppel@outlook.at">fleischerei-kroeppel@outlook.at</a> · Tel.: <a href="tel:+4315128483">+43 1 512 84 83</a></p>
+    </div>
+    <p>Diese Datenschutzerklärung informiert Sie gemäß der EU-Datenschutz-Grundverordnung (DSGVO) sowie dem österreichischen Datenschutzgesetz (DSG) darüber, wie wir personenbezogene Daten auf dieser Website verarbeiten.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>2. Kontaktformular</h2>
+    <p>Wenn Sie uns über das Kontaktformular auf der Mittagsmenü-Seite eine Nachricht senden, werden folgende Daten erhoben:</p>
+    <ul>
+      <li>Vorname und Nachname</li>
+      <li>E-Mail-Adresse</li>
+      <li>Inhalt Ihrer Nachricht</li>
+    </ul>
+    <p><strong style="color:var(--cream);">Zweck:</strong> Bearbeitung Ihrer Anfrage oder Vorbestellung.</p>
+    <p><strong style="color:var(--cream);">Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Vertragsanbahnung) bzw. lit. f DSGVO (berechtigtes Interesse an der Beantwortung von Anfragen).</p>
+    <p><strong style="color:var(--cream);">Speicherdauer:</strong> Ihre Daten werden nach vollständiger Bearbeitung der Anfrage gelöscht, spätestens nach 3 Jahren.</p>
+    <p><strong style="color:var(--cream);">Dienstleister:</strong> Die Formulardaten werden über Netlify, Inc. (44 Montgomery St Suite 300, San Francisco, CA 94104, USA) übermittelt und gespeichert. Netlify verarbeitet Daten auf Grundlage von Standardvertragsklauseln (SCC) gemäß Art. 46 DSGVO. Weitere Informationen: <a href="https://www.netlify.com/privacy/" target="_blank">netlify.com/privacy</a>.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>3. Google Fonts</h2>
+    <p>Diese Website verwendet Google Fonts (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Die Schriftarten werden beim Laden der Seite direkt von Google-Servern abgerufen. Dabei wird Ihre IP-Adresse an Google übermittelt.</p>
+    <p><strong style="color:var(--cream);">Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Cookie-Banner). Bei Ablehnung der externen Dienste werden Systemschriften verwendet.</p>
+    <p>Datenschutzerklärung Google: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+  </div>
+
+  <div class="legal-section">
+    <h2>4. Google Maps</h2>
+    <p>Auf der Hauptseite ist eine Karte von Google Maps eingebettet (Anbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland). Beim Laden der Karte wird Ihre IP-Adresse an Google übermittelt und es können Cookies gesetzt werden.</p>
+    <p><strong style="color:var(--cream);">Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung via Cookie-Banner).</p>
+    <p>Datenschutzerklärung Google Maps: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></p>
+  </div>
+
+  <div class="legal-section">
+    <h2>5. Cookies &amp; lokaler Speicher</h2>
+    <h3>Notwendig (technisch erforderlich)</h3>
+    <p><strong style="color:var(--cream);">Session Storage</strong> – speichert während Ihrer Browser-Sitzung, ob das Passwort korrekt eingegeben wurde. Wird automatisch beim Schließen des Tabs gelöscht. Keine Übertragung an Dritte.</p>
+    <p><strong style="color:var(--cream);">Local Storage (Cookie-Einwilligung)</strong> – speichert Ihre Cookie-Einstellungen dauerhaft in Ihrem Browser, damit Sie beim nächsten Besuch nicht erneut gefragt werden. Kein Ablaufdatum; kann jederzeit in den Browser-Einstellungen gelöscht werden.</p>
+    <h3>Externe Dienste (nur mit Einwilligung)</h3>
+    <p>Google Fonts und Google Maps werden nur geladen, wenn Sie im Cookie-Banner die Kategorie „Externe Dienste" akzeptieren. Ihre Einwilligung können Sie jederzeit durch Löschen des Local Storage widerrufen.</p>
+  </div>
+
+  <div class="legal-section">
+    <h2>6. Ihre Rechte</h2>
+    <p>Sie haben gemäß DSGVO folgende Rechte gegenüber uns als Verantwortlichem:</p>
+    <ul>
+      <li><strong style="color:var(--cream);">Auskunft</strong> (Art. 15 DSGVO) – Welche Daten wir über Sie verarbeiten</li>
+      <li><strong style="color:var(--cream);">Berichtigung</strong> (Art. 16 DSGVO) – Korrektur unrichtiger Daten</li>
+      <li><strong style="color:var(--cream);">Löschung</strong> (Art. 17 DSGVO) – Löschung Ihrer Daten</li>
+      <li><strong style="color:var(--cream);">Einschränkung</strong> (Art. 18 DSGVO) – Eingeschränkte Verarbeitung</li>
+      <li><strong style="color:var(--cream);">Widerspruch</strong> (Art. 21 DSGVO) – Widerspruch gegen die Verarbeitung</li>
+      <li><strong style="color:var(--cream);">Datenübertragbarkeit</strong> (Art. 20 DSGVO) – Erhalt Ihrer Daten in einem gängigen Format</li>
+      <li><strong style="color:var(--cream);">Widerruf einer Einwilligung</strong> – jederzeit ohne Angabe von Gründen</li>
+    </ul>
+    <p style="margin-top:12px;">Zur Ausübung Ihrer Rechte wenden Sie sich an: <a href="mailto:fleischerei-kroeppel@outlook.at">fleischerei-kroeppel@outlook.at</a></p>
+  </div>
+
+  <div class="legal-section">
+    <h2>7. Beschwerderecht</h2>
+    <p>Sie haben das Recht, bei der österreichischen Datenschutzbehörde Beschwerde einzulegen:</p>
+    <div class="info-box">
+      <p>Österreichische Datenschutzbehörde<br>
+      Barichgasse 40–42, 1030 Wien<br>
+      <a href="https://www.dsb.gv.at" target="_blank">dsb.gv.at</a> · <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a></p>
+    </div>
+  </div>
+
+  <div class="legal-section">
+    <h2>8. Aktualität dieser Erklärung</h2>
+    <p>Diese Datenschutzerklärung hat den Stand Juni 2026. Wir behalten uns vor, sie bei Änderungen der Datenverarbeitung oder rechtlicher Anforderungen zu aktualisieren.</p>
+  </div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="images/Logo_freigestellt.webp" alt="Logo">
+      <span>Fleischerei Kröppel · seit 1932</span>
+    </div>
+    <div>
+      <div class="footer-meta">
+        © 2026 Fleischerei Kröppel · Postgasse 1-3, 1010 Wien · <a href="tel:+4315128483">01/512 84 83</a>
+      </div>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open')})});
+</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt · Fleischerei Kröppel · Wien</title>
+<meta name="robots" content="index, follow">
+<meta name="description" content="Kontakt & Anfahrt – Fleischerei Kröppel Wien. Postgasse 1-3, 1010 Wien, U3 Stubentor. Tel: 01/512 84 83. Mo–Fr 8–18 Uhr, Sa 8–12 Uhr.">
+<link rel="icon" href="images/Logo_freigestellt.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kontakt · Fleischerei Kröppel Wien">
+<meta property="og:description" content="Besuchen Sie uns: Postgasse 1-3, 1010 Wien · U3 Stubentor. Tel: 01/512 84 83 · Mo–Fr 8–18 Uhr, Sa 8–12 Uhr.">
+<meta property="og:locale" content="de_AT">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:#0a0707;color:#e8e3dd;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700}
+:root{--red:#a01818;--red-bright:#d62828;--bg:#0a0707;--bg-2:#15100f;--bg-3:#1f1715;--cream:#f5ede1;--gold:#c9a567;--text:#e8e3dd;--muted:#a89e93}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(10,7,7,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,42,42,.4)}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display';font-size:18px;letter-spacing:1px;font-weight:700;color:var(--cream)}
+.nav-logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav-logo span{color:var(--red-bright)}
+.nav-links{display:flex;gap:34px;list-style:none}
+.nav-links a{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .25s;position:relative;padding-bottom:2px}
+.nav-links a:hover,.nav-links a.active{color:var(--red-bright)}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--red-bright);transition:width .3s}
+.nav-links a:hover::after,.nav-links a.active::after{width:100%}
+.nav-cta{padding:10px 22px;border:1px solid var(--red);color:var(--cream);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .25s}
+.nav-cta:hover{background:var(--red-bright);border-color:var(--red-bright)}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px}
+
+/* SECTION STYLES */
+.section-tag{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--red-bright);margin-bottom:16px;font-weight:600}
+.section-tag::before{content:'— '}
+.section-title{font-size:clamp(36px,5vw,64px);margin-bottom:24px;max-width:900px}
+.section-title .accent{color:var(--red-bright)}
+.section-lead{font-size:18px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:24px}
+
+/* PAGE HEADER */
+.page-header{padding:140px 6vw 80px;background:linear-gradient(180deg,rgba(160,24,24,0.08) 0%,transparent 100%);border-bottom:1px solid rgba(58,42,42,.4)}
+
+/* CONTACT */
+.contact-section{padding:80px 6vw 100px}
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;margin-top:60px;align-items:stretch}
+.contact-info{display:flex;flex-direction:column;gap:24px}
+.contact-card{background:var(--bg-2);padding:30px;border-left:3px solid var(--red);border-radius:2px;display:flex;gap:20px;align-items:flex-start}
+.contact-card .icon{width:48px;height:48px;flex-shrink:0;background:var(--red);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.contact-card .icon svg{width:22px;height:22px;fill:#fff}
+.contact-card .lbl{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--red-bright);margin-bottom:8px;font-weight:600}
+.contact-card .val{font-size:17px;color:var(--cream);line-height:1.5}
+.contact-card .val a:hover{color:var(--red-bright)}
+.contact-card .sub{font-size:14px;color:var(--muted);margin-top:6px}
+.map-wrap{position:relative;min-height:480px;border-radius:4px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.08)}
+.map-wrap iframe{width:100%;height:100%;min-height:480px;border:0;filter:hue-rotate(-10deg) saturate(.85) brightness(.92)}
+
+/* FORM */
+.form-section{padding:80px 6vw 100px;border-top:1px solid rgba(58,42,42,.5)}
+.cform{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:720px;margin-top:40px}
+.cform .full{grid-column:1/-1}
+.cform-group{display:flex;flex-direction:column;gap:7px}
+.cform-group label{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.cform-group input,.cform-group textarea{background:var(--bg-2);border:1px solid #3a2a2a;border-radius:4px;padding:13px 16px;color:var(--cream);font-family:'Inter',system-ui,sans-serif;font-size:.95rem;outline:none;transition:border-color .2s;resize:none}
+.cform-group input:focus,.cform-group textarea:focus{border-color:var(--gold)}
+.cform-group textarea{min-height:130px}
+.cform-submit{grid-column:1/-1;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.cform-submit button{padding:14px 32px;background:var(--red);border:none;border-radius:4px;color:#fff;font-size:.9rem;font-weight:600;letter-spacing:.06em;cursor:pointer;transition:background .2s}
+.cform-submit button:hover{background:var(--red-bright)}
+.cform-note{font-size:.78rem;color:var(--muted)}
+
+/* FOOTER */
+.footer{background:#050303;padding:50px 6vw 30px;border-top:1px solid rgba(255,255,255,.05)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between}
+.footer-logo{display:flex;align-items:center;gap:12px}
+.footer-logo img{width:38px;height:38px;object-fit:contain}
+.footer-logo span{font-family:'Playfair Display';font-size:18px;color:var(--cream);letter-spacing:1px}
+.footer-meta{color:var(--muted);font-size:.8rem}
+.footer-meta a{color:var(--muted)}
+.footer-legal{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
+.footer-legal a{font-size:.78rem;color:var(--muted);border-bottom:1px solid rgba(168,158,147,.25);padding-bottom:1px;transition:color .2s}
+.footer-legal a:hover{color:var(--gold)}
+
+@media(max-width:960px){.contact-grid{grid-template-columns:1fr;gap:40px}}
+@media(max-width:640px){
+  .nav-links,.nav-cta{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:#0a0707;padding:24px 6vw 32px;border-bottom:1px solid #1f1715;gap:20px}
+  .burger{display:flex}
+  .cform{grid-template-columns:1fr}
+  .cform .full,.cform-submit{grid-column:1}
+}
+</style>
+</head>
+<body>
+
+<!-- Passwortschutz -->
+<div id="pw-overlay" style="position:fixed;inset:0;z-index:9999;background:#0a0707;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'Inter',system-ui,sans-serif;">
+  <div style="text-align:center;max-width:360px;width:90%;padding:0 20px;">
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;letter-spacing:.25em;color:#c9a567;text-transform:uppercase;margin-bottom:8px;">Fleischerei Kröppel</div>
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;color:#f5ede1;margin-bottom:32px;">Zugang zur Vorschau</h2>
+    <input id="pw-input" type="password" placeholder="Passwort eingeben" style="width:100%;padding:14px 18px;background:#15100f;border:1px solid #3a2a2a;border-radius:4px;color:#e8e3dd;font-size:1rem;outline:none;margin-bottom:12px;" onkeydown="if(event.key==='Enter')checkPw()"/>
+    <button onclick="checkPw()" style="width:100%;padding:14px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;">Bestätigen</button>
+    <p id="pw-error" style="color:#d62828;margin-top:14px;font-size:.9rem;min-height:1.2em;"></p>
+  </div>
+</div>
+<script>(function(){if(sessionStorage.getItem('kp_auth')==='1'){document.getElementById('pw-overlay').style.display='none';}})();function checkPw(){var v=document.getElementById('pw-input').value;if(v==='Nkej-<jii138Kn!'){sessionStorage.setItem('kp_auth','1');document.getElementById('pw-overlay').style.display='none';}else{document.getElementById('pw-error').textContent='Falsches Passwort.';document.getElementById('pw-input').value='';}}
+</script>
+
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="images/Logo_freigestellt.webp" alt="Logo">
+    Fleischerei <span>Kröppel</span>
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="index.html#about">Über Uns</a></li>
+    <li><a href="index.html#spec">Spezialitäten</a></li>
+    <li><a href="index.html#origin">Herkunft</a></li>
+    <li><a href="index.html#gallery">Galerie</a></li>
+    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+    <li><a href="mittagsmenu.html">Mittagsmenü</a></li>
+  </ul>
+  <a href="tel:+4315128483" class="nav-cta">01 / 512 84 83</a>
+  <div class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="section-tag">Kontakt &amp; Anfahrt</div>
+  <h1 class="section-title">Besuchen Sie <span class="accent">uns.</span></h1>
+  <p class="section-lead">Postgasse 1-3, Ecke Wollzeile – direkt am U3 Stubentor. Wir freuen uns auf Ihr Kommen.</p>
+</header>
+
+<section class="contact-section">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg></div>
+        <div>
+          <div class="lbl">Adresse</div>
+          <div class="val">Postgasse 1-3<br>1010 Wien</div>
+          <div class="sub">Ecke Wollzeile · U3 Stubentor</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 00-1.02.24l-2.2 2.2a15.07 15.07 0 01-6.59-6.59l2.2-2.21c.28-.27.36-.66.25-1.02A11.36 11.36 0 018.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/></svg></div>
+        <div>
+          <div class="lbl">Telefon</div>
+          <div class="val"><a href="tel:+4315128483">01 / 512 84 83</a></div>
+          <div class="sub">Bestellungen jederzeit – Grillfest, Buffet, Platten</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+        <div>
+          <div class="lbl">E-Mail</div>
+          <div class="val"><a href="mailto:fleischerei-kroeppel@outlook.at">fleischerei-kroeppel@outlook.at</a></div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.2 14.2L11 13V7h1.5v5.2l4.5 2.7-.8 1.3z"/></svg></div>
+        <div>
+          <div class="lbl">Öffnungszeiten</div>
+          <div class="val">Mo – Fr&nbsp;&nbsp;8:00 – 18:00<br>Samstag&nbsp;&nbsp;8:00 – 12:00</div>
+          <div class="sub">Sonn- und Feiertags geschlossen</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps?q=Postgasse+1,+1010+Wien,+Austria&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Fleischerei Kröppel – Standort"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <div class="section-tag">Kontakt</div>
+  <h2 class="section-title">Schreiben Sie <span class="accent">uns.</span></h2>
+  <p class="section-lead">Anfragen, Bestellungen oder Mittagsmenü-Vorbestellungen — wir melden uns umgehend.</p>
+  <form class="cform" name="kontakt" method="POST" netlify netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="kontakt">
+    <p style="display:none;"><input name="bot-field"></p>
+    <div class="cform-group">
+      <label for="cf-vorname">Vorname</label>
+      <input type="text" id="cf-vorname" name="vorname" required placeholder="Max">
+    </div>
+    <div class="cform-group">
+      <label for="cf-nachname">Nachname</label>
+      <input type="text" id="cf-nachname" name="nachname" required placeholder="Mustermann">
+    </div>
+    <div class="cform-group full">
+      <label for="cf-email">E-Mail-Adresse</label>
+      <input type="email" id="cf-email" name="email" required placeholder="ihre@email.at">
+    </div>
+    <div class="cform-group full">
+      <label for="cf-nachricht">Nachricht</label>
+      <textarea id="cf-nachricht" name="nachricht" required placeholder="Ihre Nachricht …"></textarea>
+    </div>
+    <div class="cform-submit">
+      <button type="submit">Nachricht senden</button>
+      <span class="cform-note">Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.</span>
+    </div>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="images/Logo_freigestellt.webp" alt="Logo">
+      <span>Fleischerei Kröppel · seit 1932</span>
+    </div>
+    <div>
+      <div class="footer-meta">
+        © 2026 Fleischerei Kröppel · Postgasse 1-3, 1010 Wien · <a href="tel:+4315128483">01/512 84 83</a>
+      </div>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Cookie Banner -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#15100f;border-top:1px solid #3a2a2a;padding:20px 6vw;font-family:'Inter',system-ui,sans-serif;">
+  <div style="max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="flex:1;min-width:260px;"><p style="color:#e8e3dd;font-size:.9rem;line-height:1.5;margin:0;">Wir verwenden Cookies für externe Dienste (Google Fonts, Google Maps). <a href="#" onclick="openCookieSettings();return false;" style="color:#c9a567;text-decoration:underline;">Einstellungen</a></p></div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieDecline()" style="padding:10px 18px;background:transparent;border:1px solid #6b5550;border-radius:4px;color:#a89e93;font-size:.85rem;cursor:pointer;">Ablehnen</button>
+      <button onclick="openCookieSettings()" style="padding:10px 18px;background:transparent;border:1px solid #c9a567;border-radius:4px;color:#c9a567;font-size:.85rem;cursor:pointer;">Einstellungen</button>
+      <button onclick="cookieAcceptAll()" style="padding:10px 20px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+<div id="cookie-modal" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.75);align-items:center;justify-content:center;">
+  <div style="background:#15100f;border:1px solid #3a2a2a;border-radius:8px;max-width:520px;width:90%;padding:32px;font-family:'Inter',system-ui,sans-serif;max-height:90vh;overflow-y:auto;">
+    <h3 style="font-family:'Playfair Display',Georgia,serif;color:#f5ede1;font-size:1.3rem;margin-bottom:8px;">Cookie-Einstellungen</h3>
+    <p style="color:#a89e93;font-size:.85rem;margin-bottom:24px;line-height:1.5;">Notwendige Cookies sind für die Grundfunktionen erforderlich und können nicht deaktiviert werden.</p>
+    <div style="border:1px solid #2a1f1f;border-radius:6px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;"><strong style="color:#e8e3dd;font-size:.9rem;">Notwendig</strong><span style="background:#3a2a2a;color:#c9a567;font-size:.75rem;padding:3px 10px;border-radius:20px;">Immer aktiv</span></div>
+      <p style="color:#a89e93;font-size:.8rem;margin:0;">Sitzungsverwaltung, Passwortschutz, Cookie-Einwilligung.</p>
+    </div>
+    <div style="border:1px solid #2a1f1f;border-radius:6px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <strong style="color:#e8e3dd;font-size:.9rem;">Externe Dienste</strong>
+        <label style="position:relative;width:42px;height:24px;display:inline-block;cursor:pointer;">
+          <input type="checkbox" id="ck-external" style="opacity:0;width:0;height:0;" checked>
+          <span id="ck-external-track" onclick="toggleCkTrack('external')" style="position:absolute;inset:0;background:#a01818;border-radius:20px;transition:.3s;"></span>
+          <span id="ck-external-thumb" style="position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.3s;transform:translateX(18px);"></span>
+        </label>
+      </div>
+      <p style="color:#a89e93;font-size:.8rem;margin:0;">Google Fonts und Google Maps. <a href="https://policies.google.com/privacy" target="_blank" style="color:#c9a567;">Datenschutz Google</a></p>
+    </div>
+    <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;">
+      <button onclick="cookieDecline()" style="flex:1;padding:11px;background:transparent;border:1px solid #6b5550;border-radius:4px;color:#a89e93;font-size:.85rem;cursor:pointer;">Ablehnen</button>
+      <button onclick="cookieSaveSettings()" style="flex:1;padding:11px;background:transparent;border:1px solid #c9a567;border-radius:4px;color:#c9a567;font-size:.85rem;cursor:pointer;">Auswahl speichern</button>
+      <button onclick="cookieAcceptAll()" style="flex:2;padding:11px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){if(!localStorage.getItem('kp_cookie_consent'))document.getElementById('cookie-banner').style.display='block';})();
+function openCookieSettings(){var c=localStorage.getItem('kp_cookie_consent');if(c){try{var s=JSON.parse(c);document.getElementById('ck-external').checked=!!s.external;syncToggle('external',!!s.external);}catch(e){}}document.getElementById('cookie-modal').style.display='flex';}
+function toggleCkTrack(id){var cb=document.getElementById('ck-'+id);cb.checked=!cb.checked;syncToggle(id,cb.checked);}
+function syncToggle(id,val){var thumb=document.getElementById('ck-'+id+'-thumb');var track=document.getElementById('ck-'+id+'-track');if(thumb)thumb.style.transform=val?'translateX(18px)':'translateX(0)';if(track)track.style.background=val?'#a01818':'#3a2a2a';}
+function cookieAcceptAll(){localStorage.setItem('kp_cookie_consent',JSON.stringify({external:true,ts:Date.now()}));document.getElementById('cookie-banner').style.display='none';document.getElementById('cookie-modal').style.display='none';}
+function cookieDecline(){localStorage.setItem('kp_cookie_consent',JSON.stringify({external:false,ts:Date.now()}));document.getElementById('cookie-banner').style.display='none';document.getElementById('cookie-modal').style.display='none';}
+function cookieSaveSettings(){var ext=document.getElementById('ck-external').checked;localStorage.setItem('kp_cookie_consent',JSON.stringify({external:ext,ts:Date.now()}));document.getElementById('cookie-banner').style.display='none';document.getElementById('cookie-modal').style.display='none';}
+document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open')});});
+</script>
+</body>
+</html>

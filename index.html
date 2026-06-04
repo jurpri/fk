@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fleischerei Kröppel · seit 1932 · Wien</title>
+<meta name="description" content="Fleischerei Kröppel – Ihre Traditionsfleischerei im 1. Bezirk Wiens. Seit 1932 in vierter Generation. Hausgemachter Beinschinken, Pastrami, Schinkenbraten und mehr.">
+<meta name="keywords" content="Fleischerei, Wien, Innenstadt, Beinschinken, Pastrami, Schinkenbraten, Rib-Eye, Kröppel, 1010, Postgasse, Wurst, Selch, Räucherei, Tradition">
+<meta name="robots" content="index, follow">
+<link rel="icon" href="images/Logo_freigestellt.webp" type="image/webp">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fleischerei Kröppel · seit 1932 · Wien">
+<meta property="og:description" content="Traditionsfleischerei im 1. Bezirk Wiens. Seit 1932 in vierter Generation: hausgemachter Beinschinken, Pastrami, Schinkenbraten & täglich frisches Mittagsmenü.">
+<meta property="og:image" content="images/vater_sohn_steak.jpg">
+<meta property="og:locale" content="de_AT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fleischerei Kröppel · seit 1932 · Wien">
+<meta name="twitter:description" content="Hausgemachte Fleisch- und Wurstspezialitäten seit 1932. Postgasse 1-3, 1010 Wien · U3 Stubentor.">
+<meta name="geo.region" content="AT-9">
+<meta name="geo.placename" content="Wien">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MeatEstablishment",
+  "name": "Fleischerei Kröppel",
+  "description": "Traditionsfleischerei im 1. Bezirk Wiens seit 1932 – in vierter Generation. Hausgemachte Spezialitäten: Beinschinken, Pastrami, Schinkenbraten, Dry-Aged Fleisch und täglich frisches Mittagsmenü.",
+  "telephone": "+4315128483",
+  "email": "fleischerei-kroeppel@outlook.at",
+  "foundingDate": "1932",
+  "priceRange": "€€",
+  "servesCuisine": "Österreichische Küche",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Postgasse 1-3",
+    "addressLocality": "Wien",
+    "postalCode": "1010",
+    "addressCountry": "AT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.2086,
+    "longitude": 16.3769
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday"],
+      "opens": "08:00",
+      "closes": "12:00"
+    }
+  ],
+  "hasMenu": "mittagsmenu.html",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+4315128483",
+    "contactType": "customer service",
+    "availableLanguage": "German"
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ RESET & BASE ============ */
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; }
+body {
+  font-family:'Inter', system-ui, sans-serif;
+  background:#0a0707;
+  color:#e8e3dd;
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img { max-width:100%; display:block; }
+a { color:inherit; text-decoration:none; }
+h1,h2,h3,h4 { font-family:'Playfair Display', Georgia, serif; line-height:1.15; font-weight:700; }
+
+:root {
+  --red:#a01818;
+  --red-deep:#7a1212;
+  --red-bright:#d62828;
+  --bg:#0a0707;
+  --bg-2:#15100f;
+  --bg-3:#1f1715;
+  --cream:#f5ede1;
+  --gold:#c9a567;
+  --text:#e8e3dd;
+  --muted:#a89e93;
+}
+
+/* ============ NAVIGATION ============ */
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:18px 6vw;
+  background:rgba(10,7,7,0.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(58,42,42,.4);
+}
+.nav-logo { display:flex; align-items:center; gap:12px; font-family:'Playfair Display'; font-size:18px; letter-spacing:1px; font-weight:700; color:var(--cream); }
+.nav-logo img { width:42px; height:42px; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,.4)); }
+.nav-logo span { color:var(--red-bright); }
+.nav-links { display:flex; gap:34px; list-style:none; }
+.nav-links a {
+  font-size:13px; letter-spacing:2.5px; text-transform:uppercase; font-weight:500;
+  color:var(--text); position:relative; padding:6px 0; transition:color .25s;
+}
+.nav-links a:hover { color:var(--red-bright); }
+.nav-links a::after {
+  content:''; position:absolute; left:0; bottom:0; height:1px; width:0; background:var(--red-bright);
+  transition:width .3s ease;
+}
+.nav-links a:hover::after { width:100%; }
+.nav-cta {
+  background:var(--red); color:#fff; padding:11px 22px; border-radius:2px;
+  font-size:12px; letter-spacing:2px; text-transform:uppercase; font-weight:600;
+  transition:all .25s; border:1px solid var(--red);
+}
+.nav-cta:hover { background:var(--red-bright); border-color:var(--red-bright); transform:translateY(-1px); }
+.burger { display:none; flex-direction:column; gap:5px; cursor:pointer; padding:8px; }
+.burger span { width:24px; height:2px; background:var(--cream); transition:.3s; }
+
+/* ============ HERO ============ */
+.hero {
+  position:relative; min-height:100vh; display:flex; align-items:center; justify-content:center;
+  overflow:hidden;
+  background:#0a0707;
+}
+.hero-video {
+  position:absolute; inset:0; z-index:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  pointer-events:none;
+}
+.hero-overlay {
+  position:absolute; inset:0; z-index:1;
+  background:
+    linear-gradient(to bottom, rgba(10,7,7,.45) 0%, rgba(10,7,7,.55) 100%),
+    radial-gradient(circle at 20% 30%, rgba(160,24,24,.30) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(122,18,18,.25) 0%, transparent 45%);
+}
+.hero::before { display:none; }
+.hero-smoke {
+  position:absolute; inset:0; z-index:2; pointer-events:none; opacity:.6;
+  background:
+    radial-gradient(circle at 30% 80%, rgba(255,180,120,.06) 0%, transparent 25%),
+    radial-gradient(circle at 70% 20%, rgba(255,200,150,.05) 0%, transparent 30%);
+  animation:smokeShift 14s ease-in-out infinite alternate;
+}
+@keyframes smokeShift {
+  0% { transform:translate(0,0) scale(1); opacity:.5; }
+  100% { transform:translate(-30px,20px) scale(1.15); opacity:.75; }
+}
+.embers { position:absolute; inset:0; z-index:2; pointer-events:none; }
+.ember {
+  position:absolute; width:4px; height:4px; border-radius:50%;
+  background:radial-gradient(circle, rgba(255,150,80,.9), rgba(255,80,40,.2));
+  box-shadow:0 0 8px rgba(255,140,60,.6);
+  animation:floatUp linear infinite;
+}
+@keyframes floatUp {
+  0%   { transform:translateY(0) translateX(0); opacity:0; }
+  10%  { opacity:1; }
+  90%  { opacity:.8; }
+  100% { transform:translateY(-100vh) translateX(var(--drift,40px)); opacity:0; }
+}
+
+.hero-inner {
+  position:relative; z-index:5; padding:0 24px;
+  max-width:1200px; width:100%;
+  display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:60px;
+}
+.hero-text { flex:1; }
+
+.hero-logo {
+  width:min(420px, 42vw); flex-shrink:0;
+  position:relative;
+  filter:drop-shadow(0 12px 40px rgba(160,24,24,.55));
+  opacity:0; transform:scale(.7) translateY(30px);
+  animation:logoEnter 1.6s cubic-bezier(.2,.8,.2,1) .3s forwards;
+}
+@keyframes logoEnter {
+  to { opacity:1; transform:scale(1) translateY(0); }
+}
+.hero-logo img {
+  width:100%; height:auto; display:block;
+  animation:logoBreath 5s ease-in-out 2s infinite;
+}
+@keyframes logoBreath {
+  0%,100% { transform:scale(1); filter:drop-shadow(0 0 25px rgba(160,24,24,.35)); }
+  50%     { transform:scale(1.025); filter:drop-shadow(0 0 45px rgba(214,40,40,.55)); }
+}
+
+/* Radial glow behind logo, fades in */
+.hero-logo::before {
+  content:''; position:absolute; inset:-15%; z-index:-1; border-radius:50%;
+  background:radial-gradient(circle, rgba(214,40,40,.35) 0%, transparent 65%);
+  opacity:0; animation:glowIn 1.4s ease 1s forwards;
+}
+@keyframes glowIn { to { opacity:1; } }
+
+/* Rotating decorative ring */
+.hero-logo::after {
+  content:''; position:absolute; inset:-8%; z-index:-1; border-radius:50%;
+  border:1px solid rgba(214,40,40,.18);
+  opacity:0; animation:ringIn 1.6s ease 1.2s forwards, ringSpin 32s linear 2.8s infinite;
+}
+@keyframes ringIn  { to { opacity:1; } }
+@keyframes ringSpin { to { transform:rotate(360deg); } }
+
+@keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+.hero-tag {
+  font-family:'Playfair Display', serif; font-style:italic; font-size:clamp(15px, 1.5vw, 18px);
+  color:#e8c278; margin-bottom:16px; letter-spacing:1px;
+  text-shadow:0 1px 8px rgba(0,0,0,.7);
+  opacity:0; animation:fadeUp 1s ease .3s forwards;
+}
+.hero-title {
+  font-size:clamp(48px, 8vw, 96px); font-weight:900;
+  letter-spacing:-1px; line-height:.95; margin-bottom:24px;
+  background:linear-gradient(180deg, #ffffff 0%, #f0e6d6 100%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+  filter:drop-shadow(0 2px 12px rgba(0,0,0,.6));
+  opacity:0; animation:fadeUp 1.2s ease .5s forwards;
+}
+.hero-title .accent { color:var(--red-bright); -webkit-text-fill-color:var(--red-bright); display:block; }
+.hero-sub {
+  font-size:clamp(16px, 1.6vw, 19px); color:#cec6bc; max-width:620px;
+  margin:0 0 40px; line-height:1.7;
+  text-shadow:0 1px 6px rgba(0,0,0,.65);
+  opacity:0; animation:fadeUp 1s ease .7s forwards;
+}
+.hero-stats {
+  display:flex; justify-content:flex-start; gap:48px; margin-bottom:48px; flex-wrap:wrap;
+  opacity:0; animation:fadeUp 1s ease .9s forwards;
+}
+.hero-stat { text-align:center; }
+.hero-stat-num { font-family:'Playfair Display'; font-size:34px; font-weight:700; color:#e83535; line-height:1; text-shadow:0 2px 10px rgba(0,0,0,.5); }
+.hero-stat-lbl { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:#b8b0a4; margin-top:8px; text-shadow:0 1px 4px rgba(0,0,0,.6); }
+
+.hero-cta-row {
+  display:flex; gap:16px; justify-content:flex-start; flex-wrap:wrap;
+  opacity:0; animation:fadeUp 1s ease 1.1s forwards;
+}
+.btn {
+  display:inline-flex; align-items:center; gap:10px;
+  padding:16px 32px; font-size:13px; letter-spacing:2.5px; text-transform:uppercase; font-weight:600;
+  border-radius:2px; transition:all .3s; cursor:pointer; border:1px solid transparent;
+}
+.btn-primary {
+  background:var(--red); color:#fff; border-color:var(--red);
+  box-shadow:0 6px 24px rgba(160,24,24,.4);
+}
+.btn-primary:hover { background:var(--red-bright); border-color:var(--red-bright); transform:translateY(-2px); box-shadow:0 10px 30px rgba(214,40,40,.5); }
+.btn-ghost { background:transparent; color:var(--cream); border-color:rgba(245,237,225,.3); }
+.btn-ghost:hover { border-color:var(--cream); background:rgba(245,237,225,.08); }
+
+.scroll-cue {
+  position:absolute; bottom:30px; left:50%; transform:translateX(-50%); z-index:5;
+  color:var(--muted); font-size:11px; letter-spacing:3px; text-transform:uppercase;
+  opacity:0; animation:fadeUp 1s ease 1.4s forwards;
+}
+.scroll-cue::after {
+  content:''; display:block; width:1px; height:40px; background:var(--muted);
+  margin:12px auto 0; animation:scrollDot 2s ease-in-out infinite;
+}
+@keyframes scrollDot { 0%,100% { transform:scaleY(.4); transform-origin:top; } 50% { transform:scaleY(1); } }
+
+/* ============ SECTIONS ============ */
+section { padding:120px 6vw; position:relative; scroll-margin-top:80px; }
+.section-tag {
+  font-size:12px; letter-spacing:4px; text-transform:uppercase; color:var(--red-bright);
+  margin-bottom:16px; font-weight:600;
+}
+.section-tag::before { content:'— '; }
+.section-title {
+  font-size:clamp(36px, 5vw, 64px); margin-bottom:24px; max-width:900px;
+}
+.section-title .accent { color:var(--red-bright); }
+.section-lead { font-size:18px; color:var(--muted); max-width:680px; line-height:1.75; margin-bottom:24px; }
+
+/* ============ ABOUT ============ */
+.about {
+  background:linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+.about-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; margin-top:60px;
+}
+.about-text p { color:var(--muted); margin-bottom:18px; font-size:16px; line-height:1.8; }
+.about-image {
+  position:relative; aspect-ratio:4/5; overflow:hidden; border-radius:4px;
+  box-shadow:0 30px 60px rgba(0,0,0,.5);
+}
+.about-image img { width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
+.about-image:hover img { transform:scale(1.05); }
+.about-image::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg, transparent 60%, rgba(10,7,7,.6) 100%);
+}
+.about-badge {
+  position:absolute; bottom:24px; left:24px; z-index:2;
+  background:var(--red); color:#fff; padding:18px 24px; border-radius:2px;
+}
+.about-badge .y { font-family:'Playfair Display'; font-size:32px; font-weight:700; line-height:1; }
+.about-badge .l { font-size:10px; letter-spacing:3px; text-transform:uppercase; margin-top:4px; }
+
+.gen-strip {
+  margin-top:80px; padding:40px; background:var(--bg-3); border-left:3px solid var(--red);
+  display:grid; grid-template-columns:repeat(4, 1fr); gap:40px;
+}
+.gen-item .num { font-family:'Playfair Display'; font-size:42px; color:var(--red-bright); font-weight:700; line-height:1; }
+.gen-item .lbl { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+.gen-item .desc { font-size:14px; color:var(--cream); margin-top:10px; }
+
+/* ============ SPECIALITIES ============ */
+.spec { background:var(--bg); }
+.spec-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:30px; margin-top:60px;
+}
+.spec-card {
+  position:relative; background:var(--bg-2); overflow:hidden; border-radius:4px;
+  transition:transform .4s ease, box-shadow .4s ease;
+  border:1px solid rgba(255,255,255,.04);
+}
+.spec-card:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(0,0,0,.5); border-color:rgba(160,24,24,.4); }
+.spec-img { aspect-ratio:4/3; overflow:hidden; position:relative; }
+.spec-img img { width:100%; height:100%; object-fit:cover; transition:transform .8s ease; }
+.spec-card:hover .spec-img img { transform:scale(1.08); }
+.spec-img::after {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(180deg, transparent 50%, rgba(10,7,7,.85) 100%);
+}
+.spec-body { padding:28px; }
+.spec-body h3 { font-size:24px; margin-bottom:12px; color:var(--cream); }
+.spec-body h3 .tag { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--red-bright); display:block; margin-bottom:8px; font-family:'Inter'; font-weight:600; }
+.spec-body p { font-size:14.5px; color:var(--muted); line-height:1.75; }
+
+/* ============ STORY (Selch + Herkunft) ============ */
+.story {
+  background:linear-gradient(180deg, var(--bg-2) 0%, var(--bg) 100%);
+}
+.story-grid {
+  display:grid; grid-template-columns:1.2fr 1fr; gap:80px; align-items:center; margin-top:60px;
+}
+.story-grid.reverse { grid-template-columns:1fr 1.2fr; margin-top:120px; }
+.story-img {
+  position:relative; aspect-ratio:3/4; overflow:hidden; border-radius:4px;
+  box-shadow:0 30px 60px rgba(0,0,0,.6);
+}
+.story-img img { width:100%; height:100%; object-fit:cover; }
+.story-text h2 { font-size:clamp(32px, 4vw, 48px); margin-bottom:20px; }
+.story-text p { color:var(--muted); font-size:16px; line-height:1.85; margin-bottom:16px; }
+.farms {
+  margin-top:30px; display:grid; grid-template-columns:repeat(2, 1fr); gap:20px;
+}
+.farm-item {
+  padding:18px 20px; border-left:2px solid var(--red); background:var(--bg-3);
+}
+.farm-item .role { font-size:11px; letter-spacing:2.5px; text-transform:uppercase; color:var(--red-bright); font-weight:600; }
+.farm-item .name { font-size:15px; color:var(--cream); margin-top:6px; font-weight:500; }
+
+/* ============ GALLERY ============ */
+.gallery { background:var(--bg); }
+
+/* CAROUSEL */
+.carousel-wrap { position:relative; margin-top:60px; }
+.carousel-viewport { overflow:hidden; border-radius:4px; }
+.carousel-track {
+  display:flex;
+  gap:14px;
+  will-change:transform;
+}
+.carousel-slide {
+  flex:0 0 calc((100% - 28px) / 3);
+  aspect-ratio:4/3;
+  overflow:hidden;
+  border-radius:3px;
+  background:var(--bg-3);
+  flex-shrink:0;
+}
+.carousel-slide img {
+  width:100%; height:100%;
+  object-fit:cover;
+  transition:transform .6s ease, filter .4s;
+  filter:saturate(.9) brightness(.95);
+  pointer-events:none;
+  display:block;
+}
+.carousel-slide:hover img { transform:scale(1.05); filter:saturate(1.1) brightness(1.03); }
+.carousel-btn {
+  position:absolute; top:50%; transform:translateY(-50%); z-index:10;
+  background:rgba(10,7,7,.82); border:1px solid rgba(201,165,103,.45);
+  color:var(--gold); width:52px; height:52px; border-radius:50%;
+  cursor:pointer; font-size:22px; line-height:1;
+  display:flex; align-items:center; justify-content:center;
+  transition:background .2s, border-color .2s, color .2s;
+}
+.carousel-btn:hover { background:var(--red); border-color:var(--red); color:#fff; }
+.carousel-prev { left:16px; }
+.carousel-next { right:16px; }
+
+/* ============ PRESS ============ */
+.press { background:var(--bg-2); padding:80px 6vw; }
+.press-inner { max-width:1200px; margin:0 auto; }
+
+/* Video Interview */
+.press-video-wrap {
+  display:grid; grid-template-columns:1.4fr 1fr; gap:48px; align-items:center;
+  margin-bottom:72px;
+  background:var(--bg); border:1px solid rgba(255,255,255,.07); border-radius:6px;
+  overflow:hidden;
+}
+.press-video-player { line-height:0; }
+.press-video-player video { width:100%; height:100%; object-fit:cover; object-position:center 70%; display:block; max-height:420px; }
+.press-video-text { padding:40px 40px 40px 0; }
+.press-video-tag { font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--red-bright); font-weight:600; margin-bottom:14px; }
+.press-video-title { font-family:'Playfair Display',Georgia,serif; font-size:clamp(24px,3vw,36px); color:var(--cream); margin-bottom:20px; line-height:1.2; }
+.press-video-body { color:var(--muted); font-size:15px; line-height:1.8; margin-bottom:12px; }
+
+/* Presseartikel */
+.press-articles {
+  display:grid; grid-template-columns:1fr 1fr; gap:32px;
+  margin-bottom:64px;
+}
+.press-article-link { display:block; text-decoration:none; color:inherit; border-radius:4px; overflow:hidden; border:1px solid rgba(255,255,255,.07); transition:transform .3s, box-shadow .3s; }
+.press-article-link:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.4); }
+.press-article-img { position:relative; overflow:hidden; aspect-ratio:4/3; }
+.press-article-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
+.press-article-link:hover .press-article-img img { transform:scale(1.05); }
+.press-article-overlay {
+  position:absolute; inset:0; background:rgba(10,7,7,.55); display:flex;
+  align-items:center; justify-content:center; opacity:0; transition:opacity .3s;
+}
+.press-article-link:hover .press-article-overlay { opacity:1; }
+.press-open-lbl { font-size:14px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:600; }
+.press-article-meta { padding:20px 22px; background:var(--bg); }
+.press-pub { display:block; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+.press-headline { display:block; font-family:'Playfair Display',Georgia,serif; font-size:18px; color:var(--cream); line-height:1.3; }
+
+/* Zitate */
+.press-quotes { display:grid; grid-template-columns:repeat(2, 1fr); gap:32px; }
+.press-quote { text-align:left; padding:30px; border:1px solid rgba(255,255,255,.08); border-radius:4px; background:var(--bg); }
+.press-quote .pq { font-family:'Playfair Display'; font-style:italic; font-size:20px; line-height:1.5; color:var(--cream); margin-bottom:18px; }
+.press-quote .src { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+
+/* ============ CONTACT ============ */
+.contact { background:var(--bg); padding-bottom:80px; }
+.contact-grid {
+  display:grid; grid-template-columns:1fr 1.3fr; gap:60px; margin-top:60px; align-items:stretch;
+}
+.contact-info { display:flex; flex-direction:column; gap:24px; }
+.contact-card {
+  background:var(--bg-2); padding:30px; border-left:3px solid var(--red); border-radius:2px;
+  display:flex; gap:20px; align-items:flex-start;
+}
+.contact-card .icon {
+  width:48px; height:48px; flex-shrink:0; background:var(--red); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+}
+.contact-card .icon svg { width:22px; height:22px; fill:#fff; }
+.contact-card .lbl { font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--red-bright); margin-bottom:8px; font-weight:600; }
+.contact-card .val { font-size:17px; color:var(--cream); line-height:1.5; }
+.contact-card .val a:hover { color:var(--red-bright); }
+.contact-card .sub { font-size:14px; color:var(--muted); margin-top:6px; }
+
+.map-wrap {
+  position:relative; min-height:480px; border-radius:4px; overflow:hidden;
+  box-shadow:0 20px 50px rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.08);
+}
+.map-wrap iframe { width:100%; height:100%; min-height:480px; border:0; filter:hue-rotate(-10deg) saturate(.85) brightness(.92); }
+
+/* ============ KONTAKTFORMULAR ============ */
+.contact-form-wrap { margin-top:72px; padding-top:60px; border-top:1px solid rgba(58,42,42,.5); }
+.contact-form-wrap h2 { font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.6rem,3vw,2.2rem); color:var(--cream); margin-bottom:8px; }
+.contact-form-wrap .form-lead { color:var(--muted); font-size:.9rem; margin-bottom:36px; }
+.cform { display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:720px; }
+.cform .full { grid-column:1/-1; }
+.cform-group { display:flex; flex-direction:column; gap:7px; }
+.cform-group label { font-size:.75rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+.cform-group input, .cform-group textarea {
+  background:var(--bg-2); border:1px solid #3a2a2a; border-radius:4px;
+  padding:13px 16px; color:var(--cream); font-family:'Inter',system-ui,sans-serif;
+  font-size:.95rem; outline:none; transition:border-color .2s; resize:none;
+}
+.cform-group input:focus, .cform-group textarea:focus { border-color:var(--gold); }
+.cform-group textarea { min-height:130px; }
+.cform-submit { grid-column:1/-1; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+.cform-submit button {
+  padding:14px 32px; background:var(--red); border:none; border-radius:4px;
+  color:#fff; font-size:.9rem; font-weight:600; letter-spacing:.06em; cursor:pointer; transition:background .2s;
+}
+.cform-submit button:hover { background:var(--red-bright); }
+.cform-note { font-size:.78rem; color:var(--muted); }
+
+/* ============ FOOTER ============ */
+.footer {
+  background:#050303; padding:50px 6vw 30px; border-top:1px solid rgba(255,255,255,.05);
+}
+.footer-inner {
+  display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+  max-width:1400px; margin:0 auto;
+}
+.footer-logo { display:flex; align-items:center; gap:12px; }
+.footer-logo img { width:38px; height:38px; object-fit:contain; }
+.footer-logo span { font-family:'Playfair Display'; font-size:18px; color:var(--cream); letter-spacing:1px; }
+.footer-meta { font-size:13px; color:var(--muted); }
+.footer-meta a:hover { color:var(--red-bright); }
+.footer-legal { display:flex; gap:20px; flex-wrap:wrap; margin-top:10px; }
+.footer-legal a { font-size:.78rem; color:var(--muted); border-bottom:1px solid rgba(168,158,147,.25); padding-bottom:1px; transition:color .2s; }
+.footer-legal a:hover { color:var(--gold); }
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 960px) {
+  .nav-links, .nav-cta { display:none; }
+  .burger { display:flex; }
+  .nav-links.open {
+    display:flex; flex-direction:column; position:absolute; top:100%; right:6vw;
+    background:rgba(10,7,7,.97); padding:20px 30px; border-radius:4px; gap:18px;
+    border:1px solid rgba(255,255,255,.08);
+  }
+  .about-grid, .story-grid, .story-grid.reverse, .contact-grid { grid-template-columns:1fr; gap:50px; }
+  .gen-strip { grid-template-columns:repeat(2, 1fr); gap:24px; padding:30px; }
+  .carousel-slide { flex: 0 0 calc((100% - 14px) / 2); }
+  .press-video-wrap { grid-template-columns:1fr; }
+  .press-video-text { padding:24px; }
+  .press-articles { grid-template-columns:1fr; }
+  .press-quotes { grid-template-columns:1fr; gap:24px; }
+  .hero-stats { gap:30px; }
+  section { padding:80px 6vw; }
+  .farms { grid-template-columns:1fr; }
+  .hero-inner { flex-direction:column; text-align:center; gap:40px; }
+  .hero-logo { width:min(280px, 70vw); order:1; }
+  .hero-text { order:2; }
+  .hero-stats, .hero-cta-row { justify-content:center; }
+}
+@media (max-width: 560px) {
+  .hero-stats { gap:24px; }
+  .hero-stat-num { font-size:28px; }
+  .gen-strip { grid-template-columns:1fr; }
+  .carousel-slide { flex: 0 0 100%; }
+}
+
+.reveal { opacity:0; transform:translateY(30px); transition:opacity .8s ease, transform .8s ease; }
+.reveal.in { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- Passwortschutz -->
+<div id="pw-overlay" style="
+  position:fixed;inset:0;z-index:9999;
+  background:#0a0707;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font-family:'Inter',system-ui,sans-serif;
+">
+  <div style="text-align:center;max-width:360px;width:90%;padding:0 20px;">
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:1.1rem;letter-spacing:.25em;color:#c9a567;text-transform:uppercase;margin-bottom:8px;">Fleischerei Kröppel</div>
+    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:1.8rem;color:#f5ede1;margin-bottom:32px;">Zugang zur Vorschau</h2>
+    <input id="pw-input" type="password" placeholder="Passwort eingeben"
+      style="width:100%;padding:14px 18px;background:#15100f;border:1px solid #3a2a2a;border-radius:4px;color:#e8e3dd;font-size:1rem;outline:none;margin-bottom:12px;"
+      onkeydown="if(event.key==='Enter')checkPw()"
+    />
+    <button onclick="checkPw()"
+      style="width:100%;padding:14px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:1rem;font-weight:600;cursor:pointer;letter-spacing:.05em;">
+      Bestätigen
+    </button>
+    <p id="pw-error" style="color:#d62828;margin-top:14px;font-size:.9rem;min-height:1.2em;"></p>
+  </div>
+</div>
+
+<script>
+  (function(){
+    if(sessionStorage.getItem('kp_auth')==='1'){
+      document.getElementById('pw-overlay').style.display='none';
+    }
+  })();
+  function checkPw(){
+    var v=document.getElementById('pw-input').value;
+    if(v==='Nkej-<jii138Kn!'){
+      sessionStorage.setItem('kp_auth','1');
+      document.getElementById('pw-overlay').style.display='none';
+    } else {
+      document.getElementById('pw-error').textContent='Falsches Passwort. Bitte erneut versuchen.';
+      document.getElementById('pw-input').value='';
+    }
+  }
+</script>
+
+<nav class="nav" id="nav">
+  <a href="#hero" class="nav-logo">
+    <img src="images/Logo_freigestellt.webp" alt="Fleischerei Kröppel">
+    Fleischerei <span>Kröppel</span>
+  </a>
+  <ul class="nav-links" id="navlinks">
+    <li><a href="#about">Über Uns</a></li>
+    <li><a href="#spec">Spezialitäten</a></li>
+    <li><a href="#origin">Herkunft</a></li>
+    <li><a href="#gallery">Galerie</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="mittagsmenu.html">Mittagsmenü</a></li>
+  </ul>
+  <a href="tel:+4315128483" class="nav-cta">01 / 512 84 83</a>
+  <div class="burger" onclick="document.getElementById('navlinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<section class="hero" id="hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
+    <source src="images/Hero Video.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-smoke"></div>
+  <div class="embers" id="embers"></div>
+
+  <div class="hero-inner">
+
+    <div class="hero-text">
+      <div class="hero-tag">Wiener Traditionsfleischerei in vierter Generation</div>
+      <h1 class="hero-title">
+        Tradition,<br>
+        die man <span class="accent">schmeckt.</span>
+      </h1>
+      <p class="hero-sub">
+        Seit 1932 stehen wir mitten im 1. Bezirk Wiens für feinste Fleisch- und Wurstspezialitäten – handgemacht, regional, mit Herz und Handwerk.
+      </p>
+
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="hero-stat-num">1932</div><div class="hero-stat-lbl">Gegründet</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">4.</div><div class="hero-stat-lbl">Generation</div></div>
+        <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-lbl">Kleinbauern</div></div>
+      </div>
+
+      <div class="hero-cta-row">
+        <a href="#spec" class="btn btn-primary">Spezialitäten Entdecken →</a>
+        <a href="kontakt.html" class="btn btn-ghost">Besuchen Sie uns</a>
+      </div>
+    </div>
+
+    <div class="hero-logo">
+      <img src="images/Logo_freigestellt.webp" alt="Fleischerei Kröppel · seit 1932">
+    </div>
+
+  </div>
+
+  <div class="scroll-cue">Scroll</div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-text reveal">
+      <div class="section-tag">Über Uns</div>
+      <h2 class="section-title" style="margin-bottom:24px;">Ein <span class="accent">Meisterbetrieb</span> im Herzen Wiens.</h2>
+      <p>Die <strong style="color:var(--cream)">Fleischerei Kröppel</strong> ist ein traditionsreicher Meisterbetrieb im 1. Bezirk Wiens. Seit der Gründung im Jahr <strong style="color:var(--red-bright)">1932</strong> ist der Betrieb für seine hochwertigen Fleisch- und Wurstspezialitäten weit über die Grenzen der Stadt hinaus bekannt.</p>
+      <p>Das Geschäft befindet sich in der <strong style="color:var(--cream)">Postgasse 1-3, 1010 Wien</strong> – Ecke Wollzeile, U3 Stubentor. Die hauseigene Produktion findet im Familienbetrieb im 9. Bezirk statt.</p>
+      <p>Mit Stolz führt Sohn <strong style="color:var(--cream)">Florian Kröppel</strong> die Fleischerei heute in der vierten Generation. Er setzt die Familientradition fort und sorgt dafür, dass Kunden weiterhin die hervorragende Qualität und den unverwechselbaren Geschmack erleben, für den die Fleischerei Kröppel seit fast einem Jahrhundert steht.</p>
+      <p>Über vier Generationen hinweg haben wir uns einen Namen gemacht – insbesondere durch unsere Expertise in der Herstellung hausgemachter Spezialitäten.</p>
+    </div>
+
+    <div class="about-image reveal">
+      <img src="images/vater_sohn_steak.jpg" alt="Josef und Florian Kröppel – Fleischermeister in 3. und 4. Generation">
+      <div class="about-badge">
+        <div class="y">94</div>
+        <div class="l">Jahre Tradition</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="gen-strip reveal">
+    <div class="gen-item"><div class="num">1932</div><div class="lbl">Gründung</div><div class="desc">Start der Familientradition</div></div>
+    <div class="gen-item"><div class="num">3.</div><div class="lbl">Generation</div><div class="desc">Josef Kröppel, Meister</div></div>
+    <div class="gen-item"><div class="num">4.</div><div class="lbl">Generation</div><div class="desc">Florian Kröppel</div></div>
+    <div class="gen-item"><div class="num">40 kg</div><div class="lbl">Pro Woche</div><div class="desc">Hausgemachte Fleischlaberln</div></div>
+  </div>
+</section>
+
+<section class="spec" id="spec">
+  <div class="reveal">
+    <div class="section-tag">Spezialitäten</div>
+    <h2 class="section-title">Hausgemacht. <span class="accent">Handgeschnitten.</span></h2>
+    <p class="section-lead">Über vier Generationen verfeinerte Rezepte – jedes Stück ein Stück Wiener Handwerk. Vom legendären Beinschinken bis zur eigenen Pastrami.</p>
+  </div>
+
+  <div class="spec-grid">
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/beinschinken_schnitt.jpg" alt="Beinschinken"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Hausspezialität</span>Beinschinken</h3>
+        <p>Aus dem Schlögel des Strohschweins – in unserer Mauerselch sorgsam geräuchert und mit Wasserdampf langsam gegart. Saftig, mild, mit leichtem Rauchgeschmack. Bei uns ausschließlich per Hand geschnitten.</p>
+      </div>
+    </article>
+
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/schinkenbraten.jpg" alt="Schinkenbraten"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Klassiker</span>Schinkenbraten</h3>
+        <p>Das Fricandeau aus dem Schlögel – gepökelt, 1-2 Tage in Salzlake, gewürzt mit Knoblauch und Kümmel und im Backrohr verzehrfertig gebraten. Knusprig und zart, im Handsemmerl ein Genuss.</p>
+      </div>
+    </article>
+
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/pastrami.jpg" alt="Pastrami hausgemacht"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Eigene Rezeptur</span>Pastrami</h3>
+        <p>Ursprünglich aus den USA – von uns verfeinert. Die gepökelte Rinderbrust wird im Heißrauch geräuchert und gebraten. Die Gewürzkruste an der Oberseite verleiht den unverwechselbaren Charakter.</p>
+      </div>
+    </article>
+
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/ribeye.jpg" alt="Rib-Eye Steak"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Dry-Aged</span>Rib-Eye Steak</h3>
+        <p>Aus dem Rinderrücken vom Hügelland in Gschoadt, Bucklige Welt. Fleischstücke mit guter Fettabdeckung reifen mindestens zwei Wochen in unserer Kühlzelle. Perfekt zum Anbraten oder Grillen.</p>
+      </div>
+    </article>
+
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/krustenbraten.jpg" alt="Krustenbraten"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Sonntagsbraten</span>Krustenbraten</h3>
+        <p>Goldbraun, mit knuspriger Schwarte und butterzartem Fleisch. Ein echter Wiener Klassiker, der zu Hause sofort einen Festtag macht – oder ins Semmerl wandert.</p>
+      </div>
+    </article>
+
+    <article class="spec-card reveal">
+      <div class="spec-img"><img src="images/roastbeef.jpg" alt="Roastbeef Platte"></div>
+      <div class="spec-body">
+        <h3><span class="tag">Auf Bestellung</span>Roastbeef-Platten</h3>
+        <p>Edel angerichtete Platten – ob für Empfänge, Familienfeste oder die Grillsaison. Wir machen Ihnen jederzeit ein maßgeschneidertes Angebot.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="story">
+  <div class="story-grid">
+    <div class="story-img reveal">
+      <img src="images/selch.jpg" alt="Hausschinken in der Mauerselch">
+    </div>
+    <div class="story-text reveal">
+      <div class="section-tag">Unsere Selch</div>
+      <h2>Wo der <span style="color:var(--red-bright)">Rauch</span> die Zeit verlangsamt.</h2>
+      <p>In unserer hauseigenen Mauerselch wird über offenem Feuer mit Buchenholz langsam geräuchert. Die Wärme zieht durch das Mauerwerk, der Rauch umhüllt jeden Schinken – stundenlang. Es ist diese Geduld, die unseren Beinschinken auszeichnet.</p>
+      <p>Was in zwanzig Minuten gehen würde, lassen wir Stunden dauern. Denn echter Geschmack lässt sich nicht beschleunigen.</p>
+    </div>
+  </div>
+
+  <div id="origin" style="scroll-margin-top:80px;"></div>
+  <div class="story-grid reverse">
+    <div class="story-text reveal">
+      <div class="section-tag">Herkunft</div>
+      <h2>Zu 100 % von <span style="color:var(--red-bright)">Kleinbauern</span>.</h2>
+      <p>Unser Fleisch beziehen wir ausschließlich von kleinen, regionalen Betrieben aus Österreich. Wir kennen unsere Bauern persönlich, bezahlen faire Preise – und die Wege sind kurz.</p>
+      <p>Das Rindfleisch kommt aus dem steirischen Hügelland, das Schweinefleisch aus dem Weinviertel. So wissen wir genau, was bei uns über die Theke geht.</p>
+
+      <div class="farms">
+        <div class="farm-item"><div class="role">Rindfleisch</div><div class="name">Familie Höller, Kirchschlag</div></div>
+        <div class="farm-item"><div class="role">Kalbfleisch</div><div class="name">Fleischerei Steiner</div></div>
+        <div class="farm-item"><div class="role">Schweinefleisch</div><div class="name">Fleischerei Schuster</div></div>
+        <div class="farm-item"><div class="role">Kooperationen</div><div class="name">Fleischerei Landel · Schreiber</div></div>
+      </div>
+    </div>
+    <div class="story-img reveal">
+      <img src="images/dryaged.jpg" alt="Dry-Aged Fleisch in der Reifekammer">
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="reveal">
+    <div class="section-tag">Galerie</div>
+    <h2 class="section-title">Aus der <span class="accent">Werkstatt</span>.</h2>
+    <p class="section-lead">Einblicke in unsere tägliche Arbeit – das Handwerk, die Spezialitäten, das Geschäft.</p>
+  </div>
+
+  <div class="carousel-wrap">
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="galleryTrack">
+        <div class="carousel-slide"><img src="images/shop.jpg" alt="Fleischerei Kröppel Geschäft"></div>
+        <div class="carousel-slide"><img src="images/vater_sohn_steak.jpg" alt="Josef und Florian Kröppel"></div>
+        <div class="carousel-slide"><img src="images/pastrami.jpg" alt="Hausgemachte Pastrami"></div>
+        <div class="carousel-slide"><img src="images/theke.jpg" alt="Fleischtheke"></div>
+        <div class="carousel-slide"><img src="images/fleischerei.jpg" alt="Eingang Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/beinschinken_schnitt.jpg" alt="Beinschinken handgeschnitten"></div>
+        <div class="carousel-slide"><img src="images/ribeye.jpg" alt="Dry-Aged Rib-Eye"></div>
+        <div class="carousel-slide"><img src="images/ente.jpg" alt="Ente mit Maroni"></div>
+        <div class="carousel-slide"><img src="images/theke 1.jpg" alt="Theke mit Spezialitäten"></div>
+        <div class="carousel-slide"><img src="images/krustenbraten.jpg" alt="Krustenbraten"></div>
+        <div class="carousel-slide"><img src="images/paprika.jpg" alt="Gefüllte Paprika"></div>
+        <div class="carousel-slide"><img src="images/kasespaetzle.jpg" alt="Käsespätzle"></div>
+        <div class="carousel-slide"><img src="images/fleischerei 1.jpg" alt="Fleischerei Kröppel von außen"></div>
+        <div class="carousel-slide"><img src="images/schinkenbraten.jpg" alt="Schinkenbraten"></div>
+        <div class="carousel-slide"><img src="images/beinschinken_schnitt 1.jpg" alt="Beinschinken fein geschnitten"></div>
+        <div class="carousel-slide"><img src="images/roastbeef.jpg" alt="Roastbeef Platte"></div>
+        <div class="carousel-slide"><img src="images/selch.jpg" alt="Mauerselch"></div>
+        <div class="carousel-slide"><img src="images/01 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/06 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/07 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/13 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/14 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/15 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/17 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/19 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/20 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/22 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/23 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/24 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/25 K.jpg" alt="Fleischerei Kröppel"></div>
+        <div class="carousel-slide"><img src="images/26 K.jpg" alt="Fleischerei Kröppel"></div>
+      </div>
+    </div>
+    <button class="carousel-btn carousel-prev" onclick="galMove(-1)">&#8592;</button>
+    <button class="carousel-btn carousel-next" onclick="galMove(1)">&#8594;</button>
+  </div>
+</section>
+
+<section class="press">
+  <div class="press-inner">
+
+    <div class="reveal" style="margin-bottom:60px;">
+      <div class="section-tag" style="margin-bottom:14px;">Aus der Presse</div>
+      <h2 class="section-title">Was andere über <span class="accent">uns</span> schreiben.</h2>
+    </div>
+
+    <!-- Video Interview -->
+    <div class="press-video-wrap reveal">
+      <div class="press-video-player">
+        <video controls preload="none" poster="images/vater_sohn_steak.jpg">
+          <source src="images/Video Interview.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="press-video-text">
+        <div class="press-video-tag">Interview</div>
+        <h3 class="press-video-title">Florian Kröppel im Gespräch</h3>
+        <p class="press-video-body">Florian Kröppel, der die Fleischerei in vierter Generation führt, im Interview über das tägliche Handwerk, die Leidenschaft für echtes Fleisch und was es bedeutet, die letzte Fleischerei in Wiens Innenstadt zu sein.</p>
+        <p class="press-video-body">Vom Beinschinken aus der Mauerselch bis zum wöchentlichen Mittagsmenü – hier spricht das Fleisch für sich.</p>
+      </div>
+    </div>
+
+    <!-- Presseartikel mit Verlinkung -->
+    <div class="press-articles reveal">
+      <a href="https://www.derstandard.at/story/3000000208855/fleischhauer-kroeppel-wir-machen-jede-woche-vierzig-kilo-fleischlaberln"
+         target="_blank" rel="noopener noreferrer" class="press-article-link">
+        <div class="press-article-img">
+          <img src="images/presse_standard.jpg" alt="Der Standard – Fleischhauer Kröppel">
+          <div class="press-article-overlay">
+            <span class="press-open-lbl">Artikel lesen ↗</span>
+          </div>
+        </div>
+        <div class="press-article-meta">
+          <span class="press-pub">Der Standard · Februar 2024</span>
+          <span class="press-headline">„Wir machen jede Woche vierzig Kilo Fleischlaberln"</span>
+        </div>
+      </a>
+
+      <a href="https://www.derstandard.at/story/2000141927285/der-letzte-fleischer-in-der-wiener-innenstadt-bei-mir-gibts"
+         target="_blank" rel="noopener noreferrer" class="press-article-link">
+        <div class="press-article-img">
+          <img src="images/presse_kurier.jpg" alt="Kurier – Fleischerei Kröppel">
+          <div class="press-article-overlay">
+            <span class="press-open-lbl">Artikel lesen ↗</span>
+          </div>
+        </div>
+        <div class="press-article-meta">
+          <span class="press-pub">Kurier · April 2025</span>
+          <span class="press-headline">„Steak ist nicht gleich Steak"</span>
+        </div>
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="images/Logo_freigestellt.webp" alt="Fleischerei Kröppel">
+      <span>Fleischerei Kröppel · seit 1932</span>
+    </div>
+    <div>
+      <div class="footer-meta">
+        © 2026 Fleischerei Kröppel · Postgasse 1-3, 1010 Wien · <a href="tel:+4315128483">01/512 84 83</a>
+      </div>
+      <div class="footer-legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="agb.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+const embersBox = document.getElementById('embers');
+const emberCount = 24;
+for (let i = 0; i < emberCount; i++) {
+  const e = document.createElement('div');
+  e.className = 'ember';
+  e.style.left = Math.random() * 100 + '%';
+  e.style.bottom = (-Math.random() * 30) + 'px';
+  e.style.animationDuration = (8 + Math.random() * 10) + 's';
+  e.style.animationDelay = (Math.random() * 12) + 's';
+  e.style.setProperty('--drift', (Math.random() * 80 - 40) + 'px');
+  e.style.opacity = .4 + Math.random() * .5;
+  const size = 2 + Math.random() * 4;
+  e.style.width = size + 'px';
+  e.style.height = size + 'px';
+  embersBox.appendChild(e);
+}
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ===== GALLERY CAROUSEL =====
+(function(){
+  const VISIBLE = 3;
+  const GAP = 14;
+  const INTERVAL = 4000;
+  const track = document.getElementById('galleryTrack');
+  if (!track) return;
+
+  const orig = Array.from(track.children);
+  const N = orig.length;
+
+  // Prepend clones of last VISIBLE slides (in correct order)
+  orig.slice(-VISIBLE).reverse().forEach(s => track.insertBefore(s.cloneNode(true), track.firstChild));
+  // Append clones of first VISIBLE slides
+  orig.slice(0, VISIBLE).forEach(s => track.appendChild(s.cloneNode(true)));
+
+  let idx = VISIBLE;
+  let busy = false;
+
+  function sw() { return track.children[0].offsetWidth + GAP; }
+
+  function jump(animate) {
+    track.style.transition = animate ? 'transform .7s cubic-bezier(.25,.1,.25,1)' : 'none';
+    track.style.transform = 'translateX(-' + (idx * sw()) + 'px)';
+  }
+
+  jump(false);
+
+  track.addEventListener('transitionend', function(e) {
+    if (e.target !== track) return;
+    if (idx >= N + VISIBLE) { idx = VISIBLE;         jump(false); }
+    else if (idx < VISIBLE) { idx = N + VISIBLE - 1; jump(false); }
+    setTimeout(function(){ busy = false; }, 50);
+  });
+
+  window.galMove = function(dir) {
+    if (busy) return;
+    busy = true;
+    idx += dir;
+    jump(true);
+    setTimeout(function(){ busy = false; }, 900); // safety reset
+  };
+
+  let timer = setInterval(function(){ galMove(1); }, INTERVAL);
+  const wrap = document.querySelector('.carousel-wrap');
+  wrap.addEventListener('mouseenter', function(){ clearInterval(timer); });
+  wrap.addEventListener('mouseleave', function(){ timer = setInterval(function(){ galMove(1); }, INTERVAL); });
+  window.addEventListener('resize', function(){ jump(false); });
+})();
+
+document.querySelectorAll('.nav-links a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navlinks').classList.remove('open');
+  });
+});
+</script>
+
+<!-- ===== COOKIE BANNER ===== -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#15100f;border-top:1px solid #3a2a2a;padding:20px 6vw;font-family:'Inter',system-ui,sans-serif;">
+  <div style="max-width:960px;margin:0 auto;display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;">
+    <div style="flex:1;min-width:260px;">
+      <p style="color:#e8e3dd;font-size:.9rem;line-height:1.5;margin:0;">
+        Wir verwenden Cookies, um die Seite korrekt darzustellen. Externe Dienste (Google Fonts, Google Maps) können dabei Daten verarbeiten.
+        <a href="#" onclick="openCookieSettings();return false;" style="color:#c9a567;text-decoration:underline;">Einstellungen</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:10px;flex-shrink:0;">
+      <button onclick="cookieDecline()" style="padding:10px 18px;background:transparent;border:1px solid #6b5550;border-radius:4px;color:#a89e93;font-size:.85rem;cursor:pointer;">Ablehnen</button>
+      <button onclick="openCookieSettings()" style="padding:10px 18px;background:transparent;border:1px solid #c9a567;border-radius:4px;color:#c9a567;font-size:.85rem;cursor:pointer;">Einstellungen</button>
+      <button onclick="cookieAcceptAll()" style="padding:10px 20px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;">Alle akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Einstellungen Modal -->
+<div id="cookie-modal" style="display:none;position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,.75);align-items:center;justify-content:center;">
+  <div style="background:#15100f;border:1px solid #3a2a2a;border-radius:8px;max-width:520px;width:90%;padding:32px;font-family:'Inter',system-ui,sans-serif;max-height:90vh;overflow-y:auto;">
+    <h3 style="font-family:'Playfair Display',Georgia,serif;color:#f5ede1;font-size:1.3rem;margin-bottom:8px;">Cookie-Einstellungen</h3>
+    <p style="color:#a89e93;font-size:.85rem;margin-bottom:24px;line-height:1.5;">Sie können selbst entscheiden, welche Kategorien Sie zulassen möchten. Notwendige Cookies sind für die Grundfunktionen der Website erforderlich und können nicht deaktiviert werden.</p>
+
+    <div style="border:1px solid #2a1f1f;border-radius:6px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <strong style="color:#e8e3dd;font-size:.9rem;">Notwendig</strong>
+        <span style="background:#3a2a2a;color:#c9a567;font-size:.75rem;padding:3px 10px;border-radius:20px;">Immer aktiv</span>
+      </div>
+      <p style="color:#a89e93;font-size:.8rem;margin:0;">Sitzungsverwaltung, Passwortschutz, Cookie-Einwilligung. Keine Übertragung an Dritte.</p>
+    </div>
+
+    <div style="border:1px solid #2a1f1f;border-radius:6px;padding:16px;margin-bottom:12px;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
+        <strong style="color:#e8e3dd;font-size:.9rem;">Externe Dienste</strong>
+        <label style="position:relative;width:42px;height:24px;display:inline-block;cursor:pointer;">
+          <input type="checkbox" id="ck-external" style="opacity:0;width:0;height:0;" checked>
+          <span id="ck-external-track" onclick="toggleCkTrack('external')" style="position:absolute;inset:0;background:#a01818;border-radius:20px;transition:.3s;"></span>
+          <span id="ck-external-thumb" style="position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:.3s;transform:translateX(18px);"></span>
+        </label>
+      </div>
+      <p style="color:#a89e93;font-size:.8rem;margin:0;">Google Fonts (Schriftarten) und Google Maps (Karte). Google kann dabei IP-Adressen verarbeiten. <a href="https://policies.google.com/privacy" target="_blank" style="color:#c9a567;">Datenschutz Google</a></p>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:24px;flex-wrap:wrap;">
+      <button onclick="cookieDecline()" style="flex:1;padding:11px;background:transparent;border:1px solid #6b5550;border-radius:4px;color:#a89e93;font-size:.85rem;cursor:pointer;">Ablehnen</button>
+      <button onclick="cookieSaveSettings()" style="flex:1;padding:11px;background:transparent;border:1px solid #c9a567;border-radius:4px;color:#c9a567;font-size:.85rem;cursor:pointer;">Auswahl speichern</button>
+      <button onclick="cookieAcceptAll()" style="flex:2;padding:11px;background:#a01818;border:none;border-radius:4px;color:#fff;font-size:.85rem;font-weight:600;cursor:pointer;">Alle akzeptieren</button>
+    </div>
+    <p style="color:#6b5550;font-size:.75rem;margin-top:16px;text-align:center;">Ihre Einwilligung können Sie jederzeit widerrufen.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var consent = localStorage.getItem('kp_cookie_consent');
+  if(!consent) document.getElementById('cookie-banner').style.display='block';
+})();
+
+function openCookieSettings(){
+  var consent = localStorage.getItem('kp_cookie_consent');
+  if(consent){
+    try{ var s=JSON.parse(consent); document.getElementById('ck-external').checked=!!s.external; syncToggle('external',!!s.external); }catch(e){}
+  }
+  document.getElementById('cookie-modal').style.display='flex';
+}
+function closeCookieModal(){
+  document.getElementById('cookie-modal').style.display='none';
+}
+function toggleCkTrack(id){
+  var cb=document.getElementById('ck-'+id);
+  cb.checked=!cb.checked;
+  syncToggle(id,cb.checked);
+}
+function syncToggle(id,val){
+  var thumb=document.getElementById('ck-'+id+'-thumb');
+  var track=document.getElementById('ck-'+id+'-track');
+  if(thumb){ thumb.style.transform=val?'translateX(18px)':'translateX(0)'; }
+  if(track){ track.style.background=val?'#a01818':'#3a2a2a'; }
+}
+function cookieAcceptAll(){
+  localStorage.setItem('kp_cookie_consent',JSON.stringify({external:true,ts:Date.now()}));
+  document.getElementById('cookie-banner').style.display='none';
+  document.getElementById('cookie-modal').style.display='none';
+}
+function cookieDecline(){
+  localStorage.setItem('kp_cookie_consent',JSON.stringify({external:false,ts:Date.now()}));
+  document.getElementById('cookie-banner').style.display='none';
+  document.getElementById('cookie-modal').style.display='none';
+}
+function cookieSaveSettings(){
+  var ext=document.getElementById('ck-external').checked;
+  localStorage.setItem('kp_cookie_consent',JSON.stringify({external:ext,ts:Date.now()}));
+  document.getElementById('cookie-banner').style.display='none';
+  document.getElementById('cookie-modal').style.display='none';
+}
+</script>
+
+</body>
+</html>
