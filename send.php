@@ -85,7 +85,7 @@ if (!$vorname || !$email || !$nachricht) {
     die(json_encode(['error' => 'Pflichtfelder fehlen']));
 }
 
-$to      = getenv('MAIL_TO') ?: 'juergen.pricken@gmail.com';
+$to      = getenv('MAIL_TO') ?: 'fleischerei-kroeppel@outlook.at';
 $subject = "Neue Anfrage von {$vorname} {$nachname}";
 $body    = "Neue Nachricht über das Kontaktformular:\n\n"
          . "Name:    {$vorname} {$nachname}\n"
