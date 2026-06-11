@@ -304,7 +304,7 @@ document.getElementById('kontakt-form').addEventListener('submit', async functio
   btn.disabled = true;
   btn.textContent = 'Wird gesendet …';
   try {
-    var res = await fetch('https://formspree.io/f/DEINE_FORM_ID', {
+    var res = await fetch('/send.php', {
       method: 'POST',
       body: new FormData(this),
       headers: { Accept: 'application/json' }
