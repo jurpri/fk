@@ -5,7 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AGB · Fleischerei Kröppel · Wien</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="icon" href="images/Logo_freigestellt.webp" type="image/webp">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#a01818">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -16,17 +21,17 @@ body{font-family:'Inter',system-ui,sans-serif;background:#0a0707;color:#e8e3dd;l
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weight:700}
 :root{--red:#a01818;--red-bright:#d62828;--bg:#0a0707;--bg-2:#15100f;--cream:#f5ede1;--gold:#c9a567;--text:#e8e3dd;--muted:#a89e93}
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:18px 6vw;background:rgba(10,7,7,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,42,42,.4)}
-.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Playfair Display';font-size:18px;letter-spacing:1px;font-weight:700;color:var(--cream)}
-.nav-logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:16px 5vw;background:rgba(10,7,7,0.92);backdrop-filter:blur(8px);border-bottom:1px solid rgba(58,42,42,.4)}
+.nav-logo{display:flex;align-items:center;gap:10px;font-family:'Playfair Display';font-size:17px;letter-spacing:1px;font-weight:700;color:var(--cream);flex-shrink:0}
+.nav-logo img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(0,0,0,.4))}
 .nav-logo span{color:var(--red-bright)}
-.nav-links{display:flex;gap:34px;list-style:none}
-.nav-links a{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);transition:color .25s}
+.nav-links{display:flex;gap:24px;list-style:none}
+.nav-links a{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);transition:color .25s}
 .nav-links a:hover{color:var(--red-bright)}
-.nav-cta{padding:10px 22px;border:1px solid var(--red);color:var(--cream);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:all .25s}
+.nav-cta{white-space:nowrap;flex-shrink:0;padding:10px 18px;background:var(--red);border:1px solid var(--red);color:#fff;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;font-weight:600;border-radius:2px;transition:all .25s}
 .nav-cta:hover{background:var(--red-bright);border-color:var(--red-bright)}
-.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;flex-shrink:0}
+.burger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:.3s}
 .page-header{padding:140px 6vw 60px;text-align:center;background:linear-gradient(180deg,rgba(160,24,24,0.08) 0%,transparent 100%);border-bottom:1px solid rgba(58,42,42,.4)}
 .page-header .tag{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .page-header h1{font-size:clamp(2rem,5vw,3.2rem);color:var(--cream)}
@@ -47,14 +52,15 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weig
 .footer-legal{display:flex;gap:20px;flex-wrap:wrap;margin-top:10px}
 .footer-legal a{font-size:.78rem;color:var(--muted);border-bottom:1px solid rgba(168,158,147,.25);padding-bottom:1px;transition:color .2s}
 .footer-legal a:hover{color:var(--gold)}
-@media(max-width:640px){.nav-links,.nav-cta{display:none}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:70px;left:0;right:0;background:#0a0707;padding:24px 6vw 32px;border-bottom:1px solid #1f1715;gap:20px}.burger{display:flex}}
+@media(max-width:1100px){.nav-links{gap:16px}}
+@media(max-width:960px){.nav-links,.nav-cta{display:none}.burger{display:flex}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:72px;left:0;right:0;background:#0a0707;padding:24px 6vw 32px;border-bottom:1px solid #1f1715;gap:20px;z-index:99}}
 </style>
 </head>
 <body>
 
 <nav class="nav" id="nav">
   <a href="index.html" class="nav-logo">
-    <img src="images/Logo_freigestellt.webp" alt="Logo">
+    <img src="images/Logo rot transparent.svg" alt="Logo">
     Fleischerei <span>Kröppel</span>
   </a>
   <ul class="nav-links" id="navlinks">
@@ -137,7 +143,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weig
 <footer class="footer">
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="images/Logo_freigestellt.webp" alt="Logo">
+      <img src="images/Logo rot transparent.svg" alt="Logo">
       <span>Fleischerei Kröppel · seit 1932</span>
     </div>
     <div>
