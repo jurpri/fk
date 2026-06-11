@@ -434,7 +434,7 @@ section { padding:120px 6vw; position:relative; scroll-margin-top:80px; }
 
 /* Presseartikel */
 .press-articles {
-  display:grid; grid-template-columns:1fr 1fr; gap:32px;
+  display:grid; grid-template-columns:repeat(3,1fr); gap:32px;
   margin-bottom:64px;
 }
 .press-article-link { display:block; text-decoration:none; color:inherit; border-radius:4px; overflow:hidden; border:1px solid rgba(255,255,255,.07); transition:transform .3s, box-shadow .3s; }
@@ -525,6 +525,9 @@ section { padding:120px 6vw; position:relative; scroll-margin-top:80px; }
 .footer-legal a:hover { color:var(--gold); }
 
 /* ============ RESPONSIVE ============ */
+@media (max-width: 1200px) {
+  .press-articles { grid-template-columns:repeat(2,1fr); }
+}
 @media (max-width: 960px) {
   .nav-links, .nav-cta { display:none; }
   .burger { display:flex; }
@@ -870,14 +873,28 @@ section { padding:120px 6vw; position:relative; scroll-margin-top:80px; }
       <a href="https://www.derstandard.at/story/2000141927285/der-letzte-fleischer-in-der-wiener-innenstadt-bei-mir-gibts"
          target="_blank" rel="noopener noreferrer" class="press-article-link">
         <div class="press-article-img">
-          <img src="images/presse_kurier.jpg" alt="Kurier – Fleischerei Kröppel">
+          <img src="images/presse_kurier.jpg" alt="Der Standard – Fleischerei Kröppel">
           <div class="press-article-overlay">
             <span class="press-open-lbl">Artikel lesen ↗</span>
           </div>
         </div>
         <div class="press-article-meta">
-          <span class="press-pub">Kurier · April 2025</span>
-          <span class="press-headline">„Steak ist nicht gleich Steak"</span>
+          <span class="press-pub">Der Standard · Dezember 2022</span>
+          <span class="press-headline">„Bei mir gibt's täglich Fleisch"</span>
+        </div>
+      </a>
+
+      <a href="https://fleischundco.at/handwerk-unternehmen/der-letzte-fleischer-in-der-wiener-innenstadt-zu-besuch-bei-der-fleischerei-kroeppel"
+         target="_blank" rel="noopener noreferrer" class="press-article-link">
+        <div class="press-article-img">
+          <img src="images/shop.jpg" alt="Fleisch &amp; Co – Fleischerei Kröppel">
+          <div class="press-article-overlay">
+            <span class="press-open-lbl">Artikel lesen ↗</span>
+          </div>
+        </div>
+        <div class="press-article-meta">
+          <span class="press-pub">Fleisch &amp; Co · Oktober 2023</span>
+          <span class="press-headline">„Zu Besuch bei der Fleischerei Kröppel"</span>
         </div>
       </a>
     </div>
