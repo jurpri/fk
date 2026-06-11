@@ -207,9 +207,7 @@ h1,h2,h3{font-family:'Playfair Display',Georgia,serif;line-height:1.15;font-weig
     <h3>Vielen Dank für Ihre Nachricht!</h3>
     <p>Wir haben Ihre Anfrage erhalten und melden uns so schnell wie möglich bei Ihnen — in der Regel noch am selben Werktag.</p>
   </div>
-  <form class="cform" id="kontakt-form" name="kontakt" method="POST" action="kontakt.html?gesendet=1" netlify netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="kontakt">
-    <p style="display:none;"><input name="bot-field"></p>
+  <form class="cform" id="kontakt-form">
     <div class="cform-group">
       <label for="cf-vorname">Vorname</label>
       <input type="text" id="cf-vorname" name="vorname" required placeholder="Max">
@@ -298,11 +296,35 @@ function cookieAcceptAll(){localStorage.setItem('kp_cookie_consent',JSON.stringi
 function cookieDecline(){localStorage.setItem('kp_cookie_consent',JSON.stringify({external:false,ts:Date.now()}));document.getElementById('cookie-banner').style.display='none';document.getElementById('cookie-modal').style.display='none';}
 function cookieSaveSettings(){var ext=document.getElementById('ck-external').checked;localStorage.setItem('kp_cookie_consent',JSON.stringify({external:ext,ts:Date.now()}));document.getElementById('cookie-banner').style.display='none';document.getElementById('cookie-modal').style.display='none';}
 document.querySelectorAll('.nav-links a').forEach(a=>{a.addEventListener('click',()=>{document.getElementById('navlinks').classList.remove('open')});});
-if(new URLSearchParams(location.search).get('gesendet')==='1'){
-  document.getElementById('kontakt-form').style.display='none';
-  document.getElementById('form-success').style.display='block';
-  document.getElementById('form-success').scrollIntoView({behavior:'smooth',block:'start'});
-}
+
+document.getElementById('kontakt-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  var btn = this.querySelector('button[type="submit"]');
+  var origText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Wird gesendet …';
+  try {
+    var res = await fetch('https://formspree.io/f/DEINE_FORM_ID', {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { Accept: 'application/json' }
+    });
+    if (res.ok) {
+      document.getElementById('kontakt-form').style.display = 'none';
+      var s = document.getElementById('form-success');
+      s.style.display = 'block';
+      s.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      btn.textContent = origText;
+      btn.disabled = false;
+      alert('Fehler beim Senden – bitte versuchen Sie es erneut oder rufen Sie uns an.');
+    }
+  } catch(err) {
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert('Fehler beim Senden – bitte versuchen Sie es erneut oder rufen Sie uns an.');
+  }
+});
 </script>
 </body>
 </html>
