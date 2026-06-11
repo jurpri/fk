@@ -982,6 +982,48 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   wrap.addEventListener('mouseenter', function(){ clearInterval(timer); });
   wrap.addEventListener('mouseleave', function(){ timer = setInterval(function(){ galMove(1); }, INTERVAL); });
   window.addEventListener('resize', function(){ jump(false); });
+
+  // Maus-Drag
+  let dragStart = null, dragDelta = 0, dragging = false;
+  const viewport = document.querySelector('.carousel-viewport');
+  viewport.style.cursor = 'grab';
+
+  viewport.addEventListener('mousedown', function(e) {
+    dragStart = e.clientX;
+    dragDelta = 0;
+    dragging = false;
+    clearInterval(timer);
+    viewport.style.cursor = 'grabbing';
+    e.preventDefault();
+  });
+  window.addEventListener('mousemove', function(e) {
+    if (dragStart === null) return;
+    dragDelta = e.clientX - dragStart;
+    if (Math.abs(dragDelta) > 5) dragging = true;
+  });
+  window.addEventListener('mouseup', function() {
+    if (dragStart === null) return;
+    if (dragging) {
+      if (dragDelta < -40) galMove(1);
+      else if (dragDelta > 40) galMove(-1);
+    }
+    dragStart = null;
+    dragging = false;
+    viewport.style.cursor = 'grab';
+    timer = setInterval(function(){ galMove(1); }, INTERVAL);
+  });
+
+  // Touch-Swipe
+  let touchStart = null;
+  viewport.addEventListener('touchstart', function(e) { touchStart = e.touches[0].clientX; clearInterval(timer); }, {passive:true});
+  viewport.addEventListener('touchend', function(e) {
+    if (touchStart === null) return;
+    var dx = e.changedTouches[0].clientX - touchStart;
+    if (dx < -40) galMove(1);
+    else if (dx > 40) galMove(-1);
+    touchStart = null;
+    timer = setInterval(function(){ galMove(1); }, INTERVAL);
+  }, {passive:true});
 })();
 
 document.querySelectorAll('.nav-links a').forEach(a => {
