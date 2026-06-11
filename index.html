@@ -983,45 +983,97 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   wrap.addEventListener('mouseleave', function(){ timer = setInterval(function(){ galMove(1); }, INTERVAL); });
   window.addEventListener('resize', function(){ jump(false); });
 
-  // Maus-Drag
-  let dragStart = null, dragDelta = 0, dragging = false;
+  // Maus-Drag (live — Track folgt dem Zeiger in Echtzeit)
+  var dragX0 = null, dragOffset0 = 0, dragVel = 0, dragPrevX = 0, dragPrevT = 0;
   const viewport = document.querySelector('.carousel-viewport');
   viewport.style.cursor = 'grab';
+  viewport.style.userSelect = 'none';
+
+  function readOffset() {
+    // Liest den aktuellen translateX-Wert aus dem laufenden Transform
+    return new DOMMatrix(window.getComputedStyle(track).transform).m41;
+  }
+
+  function snapAfterDrag(clientX) {
+    if (dragX0 === null) return;
+    var dx   = clientX - dragX0;
+    var slideW = sw();
+    dragX0 = null;
+
+    // Nächste Folie anhand aktueller Position bestimmen
+    var snapIdx = Math.round(-(dragOffset0 + dx) / slideW);
+    // Velocity-Boost: bei schnellem Wischen eine weitere Folie mitreißen
+    if (Math.abs(dragVel) > 0.4) snapIdx += (dragVel < 0 ? 1 : -1);
+
+    idx = snapIdx;
+    jump(true);                     // Transition wieder einschalten + einrasten
+    viewport.style.cursor = 'grab';
+    timer = setInterval(function(){ galMove(1); }, INTERVAL);
+  }
 
   viewport.addEventListener('mousedown', function(e) {
-    dragStart = e.clientX;
-    dragDelta = 0;
-    dragging = false;
+    if (busy) return;
+    dragOffset0 = readOffset();
+    dragX0      = e.clientX;
+    dragPrevX   = e.clientX;
+    dragPrevT   = Date.now();
+    dragVel     = 0;
+    busy = true;
+    track.style.transition = 'none';   // Transition aus → sofortige Reaktion
     clearInterval(timer);
     viewport.style.cursor = 'grabbing';
     e.preventDefault();
   });
+
   window.addEventListener('mousemove', function(e) {
-    if (dragStart === null) return;
-    dragDelta = e.clientX - dragStart;
-    if (Math.abs(dragDelta) > 5) dragging = true;
-  });
-  window.addEventListener('mouseup', function() {
-    if (dragStart === null) return;
-    if (dragging) {
-      if (dragDelta < -40) galMove(1);
-      else if (dragDelta > 40) galMove(-1);
+    if (dragX0 === null) return;
+    // Track direkt mit dem Zeiger mitbewegen
+    track.style.transform = 'translateX(' + (dragOffset0 + e.clientX - dragX0) + 'px)';
+    // Geschwindigkeit fortlaufend messen (px/ms)
+    var now = Date.now(), dt = now - dragPrevT;
+    if (dt > 8) {
+      dragVel   = (e.clientX - dragPrevX) / dt;
+      dragPrevX = e.clientX;
+      dragPrevT = now;
     }
-    dragStart = null;
-    dragging = false;
-    viewport.style.cursor = 'grab';
-    timer = setInterval(function(){ galMove(1); }, INTERVAL);
   });
 
-  // Touch-Swipe
-  let touchStart = null;
-  viewport.addEventListener('touchstart', function(e) { touchStart = e.touches[0].clientX; clearInterval(timer); }, {passive:true});
+  window.addEventListener('mouseup',    function(e) { snapAfterDrag(e.clientX); });
+
+  // Touch-Drag (live, gleiche Logik)
+  var touchX0 = null, touchOffset0 = 0, touchVel = 0, touchPrevX = 0, touchPrevT = 0;
+  viewport.addEventListener('touchstart', function(e) {
+    if (busy) return;
+    touchOffset0 = readOffset();
+    touchX0      = e.touches[0].clientX;
+    touchPrevX   = touchX0;
+    touchPrevT   = Date.now();
+    touchVel     = 0;
+    busy = true;
+    track.style.transition = 'none';
+    clearInterval(timer);
+  }, {passive:true});
+
+  viewport.addEventListener('touchmove', function(e) {
+    if (touchX0 === null) return;
+    track.style.transform = 'translateX(' + (touchOffset0 + e.touches[0].clientX - touchX0) + 'px)';
+    var now = Date.now(), dt = now - touchPrevT;
+    if (dt > 8) {
+      touchVel   = (e.touches[0].clientX - touchPrevX) / dt;
+      touchPrevX = e.touches[0].clientX;
+      touchPrevT = now;
+    }
+  }, {passive:true});
+
   viewport.addEventListener('touchend', function(e) {
-    if (touchStart === null) return;
-    var dx = e.changedTouches[0].clientX - touchStart;
-    if (dx < -40) galMove(1);
-    else if (dx > 40) galMove(-1);
-    touchStart = null;
+    if (touchX0 === null) return;
+    var dx     = e.changedTouches[0].clientX - touchX0;
+    var slideW = sw();
+    touchX0    = null;
+    var snapIdx = Math.round(-(touchOffset0 + dx) / slideW);
+    if (Math.abs(touchVel) > 0.4) snapIdx += (touchVel < 0 ? 1 : -1);
+    idx = snapIdx;
+    jump(true);
     timer = setInterval(function(){ galMove(1); }, INTERVAL);
   }, {passive:true});
 })();
